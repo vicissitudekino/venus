@@ -1,0 +1,995 @@
+2021-05-26 15:04:02.839 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Starting application on hz-zyan-zhang with PID 11448 (started by zyan.zhang in E:\venus)
+2021-05-26 15:04:02.846 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2021-05-26 15:04:02.884 [ForkJoinPool.commonPool-worker-1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1034f2d: startup date [Wed May 26 15:04:02 CST 2021]; root of context hierarchy
+2021-05-26 15:04:04.196 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-26 15:04:04.209 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-26 15:04:04.219 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-26 15:04:04.220 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+2021-05-26 15:04:04.224 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Java\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\VMware\VMware Workstation\bin\;E:\software\xftp\;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Java\bin;C:\Java\jre\bin;E:\software\Git\cmd;C:\Program Files\TortoiseSVN\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts;E:\software\apache-maven-3.8.1\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\;C:\Users\zyan.zhang\AppData\Local\Microsoft\WindowsApps;;.]
+2021-05-26 15:04:04.326 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-26 15:04:04.326 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1442 ms
+2021-05-26 15:04:04.390 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2021-05-26 15:04:04.397 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-05-26 15:04:04.397 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-05-26 15:04:04.397 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-05-26 15:04:04.397 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-05-26 15:04:04.560 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:04:04.751 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1034f2d: startup date [Wed May 26 15:04:02 CST 2021]; root of context hierarchy
+2021-05-26 15:04:04.813 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-05-26 15:04:04.814 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-05-26 15:04:04.834 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/file/File.fxml] onto handler '/fxml/file/File.fxml'
+2021-05-26 15:04:04.834 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/Main.fxml] onto handler '/fxml/Main.fxml'
+2021-05-26 15:04:04.838 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:04:04.839 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:04:05.001 [ForkJoinPool.commonPool-worker-1] INFO  o.s.ui.freemarker.SpringTemplateLoader - SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1034f2d: startup date [Wed May 26 15:04:02 CST 2021]; root of context hierarchy] and template loader path [classpath:/templates/]
+2021-05-26 15:04:05.002 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2021-05-26 15:04:05.177 [ForkJoinPool.commonPool-worker-1] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-05-26 15:04:05.188 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-26 15:04:05.198 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2021-05-26 15:04:05.216 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-26 15:04:05.219 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Started application in 2.967 seconds (JVM running for 5.113)
+2021-05-26 15:05:55.447 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - C:\Users\zyan.zhang\Desktop\副本导入数据.xlsx
+2021-05-26 15:06:01.216 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall
+2021-05-26 15:06:01.216 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - sort1
+2021-05-26 15:06:01.216 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall1
+2021-05-26 15:06:01.216 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scale1
+2021-05-26 15:09:28.455 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Starting application on hz-zyan-zhang with PID 18948 (started by zyan.zhang in E:\venus)
+2021-05-26 15:09:28.459 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2021-05-26 15:09:28.505 [ForkJoinPool.commonPool-worker-1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@cab6bd0: startup date [Wed May 26 15:09:28 CST 2021]; root of context hierarchy
+2021-05-26 15:09:29.479 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-26 15:09:29.493 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-26 15:09:29.502 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-26 15:09:29.502 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+2021-05-26 15:09:29.536 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Java\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\VMware\VMware Workstation\bin\;E:\software\xftp\;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Java\bin;C:\Java\jre\bin;E:\software\Git\cmd;C:\Program Files\TortoiseSVN\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts;E:\software\apache-maven-3.8.1\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\;C:\Users\zyan.zhang\AppData\Local\Microsoft\WindowsApps;;.]
+2021-05-26 15:09:29.633 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-26 15:09:29.634 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1128 ms
+2021-05-26 15:09:29.705 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2021-05-26 15:09:29.742 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-05-26 15:09:29.742 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-05-26 15:09:29.742 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-05-26 15:09:29.743 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-05-26 15:09:29.942 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:09:30.147 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@cab6bd0: startup date [Wed May 26 15:09:28 CST 2021]; root of context hierarchy
+2021-05-26 15:09:30.203 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-05-26 15:09:30.204 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-05-26 15:09:30.224 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/file/File.fxml] onto handler '/fxml/file/File.fxml'
+2021-05-26 15:09:30.225 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/Main.fxml] onto handler '/fxml/Main.fxml'
+2021-05-26 15:09:30.229 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:09:30.229 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:09:30.382 [ForkJoinPool.commonPool-worker-1] INFO  o.s.ui.freemarker.SpringTemplateLoader - SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@cab6bd0: startup date [Wed May 26 15:09:28 CST 2021]; root of context hierarchy] and template loader path [classpath:/templates/]
+2021-05-26 15:09:30.385 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2021-05-26 15:09:30.479 [ForkJoinPool.commonPool-worker-1] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-05-26 15:09:30.491 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-26 15:09:30.499 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2021-05-26 15:09:30.513 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-26 15:09:30.517 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Started application in 2.607 seconds (JVM running for 3.568)
+2021-05-26 15:09:35.728 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - C:\Users\zyan.zhang\Desktop\副本导入数据.xlsx
+2021-05-26 15:09:40.519 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall
+2021-05-26 15:09:40.520 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - sort1
+2021-05-26 15:09:40.520 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall1
+2021-05-26 15:09:40.520 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scale1
+2021-05-26 15:09:48.940 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 59
+15
+64
+
+2021-05-26 15:09:53.031 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 110
+2
+204
+
+2021-05-26 15:09:55.662 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - shibai
+2021-05-26 15:12:18.243 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Starting application on hz-zyan-zhang with PID 18468 (started by zyan.zhang in E:\venus)
+2021-05-26 15:12:18.247 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2021-05-26 15:12:18.291 [ForkJoinPool.commonPool-worker-1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@784ce6c0: startup date [Wed May 26 15:12:18 CST 2021]; root of context hierarchy
+2021-05-26 15:12:19.261 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-26 15:12:19.273 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-26 15:12:19.282 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-26 15:12:19.282 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+2021-05-26 15:12:19.286 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Java\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\VMware\VMware Workstation\bin\;E:\software\xftp\;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Java\bin;C:\Java\jre\bin;E:\software\Git\cmd;C:\Program Files\TortoiseSVN\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts;E:\software\apache-maven-3.8.1\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\;C:\Users\zyan.zhang\AppData\Local\Microsoft\WindowsApps;;.]
+2021-05-26 15:12:19.416 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-26 15:12:19.416 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1125 ms
+2021-05-26 15:12:19.490 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2021-05-26 15:12:19.555 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-05-26 15:12:19.556 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-05-26 15:12:19.556 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-05-26 15:12:19.556 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-05-26 15:12:19.725 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:12:19.897 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@784ce6c0: startup date [Wed May 26 15:12:18 CST 2021]; root of context hierarchy
+2021-05-26 15:12:19.953 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-05-26 15:12:19.954 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-05-26 15:12:19.974 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/file/File.fxml] onto handler '/fxml/file/File.fxml'
+2021-05-26 15:12:19.974 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/Main.fxml] onto handler '/fxml/Main.fxml'
+2021-05-26 15:12:19.979 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:12:19.979 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:12:20.136 [ForkJoinPool.commonPool-worker-1] INFO  o.s.ui.freemarker.SpringTemplateLoader - SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@784ce6c0: startup date [Wed May 26 15:12:18 CST 2021]; root of context hierarchy] and template loader path [classpath:/templates/]
+2021-05-26 15:12:20.138 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2021-05-26 15:12:20.244 [ForkJoinPool.commonPool-worker-1] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-05-26 15:12:20.258 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-26 15:12:20.266 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2021-05-26 15:12:20.282 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-26 15:12:20.286 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Started application in 2.584 seconds (JVM running for 3.527)
+2021-05-26 15:13:48.194 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Starting application on hz-zyan-zhang with PID 17340 (started by zyan.zhang in E:\venus)
+2021-05-26 15:13:48.197 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2021-05-26 15:13:48.231 [ForkJoinPool.commonPool-worker-1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35ab2314: startup date [Wed May 26 15:13:48 CST 2021]; root of context hierarchy
+2021-05-26 15:13:49.264 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-26 15:13:49.275 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-26 15:13:49.284 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-26 15:13:49.284 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+2021-05-26 15:13:49.288 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Java\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\VMware\VMware Workstation\bin\;E:\software\xftp\;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Java\bin;C:\Java\jre\bin;E:\software\Git\cmd;C:\Program Files\TortoiseSVN\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts;E:\software\apache-maven-3.8.1\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\;C:\Users\zyan.zhang\AppData\Local\Microsoft\WindowsApps;;.]
+2021-05-26 15:13:49.382 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-26 15:13:49.382 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1151 ms
+2021-05-26 15:13:49.509 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2021-05-26 15:13:49.516 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-05-26 15:13:49.517 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-05-26 15:13:49.517 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-05-26 15:13:49.517 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-05-26 15:13:49.664 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:13:49.834 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35ab2314: startup date [Wed May 26 15:13:48 CST 2021]; root of context hierarchy
+2021-05-26 15:13:49.887 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-05-26 15:13:49.888 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-05-26 15:13:49.908 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/file/File.fxml] onto handler '/fxml/file/File.fxml'
+2021-05-26 15:13:49.908 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/Main.fxml] onto handler '/fxml/Main.fxml'
+2021-05-26 15:13:49.914 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:13:49.914 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:13:50.066 [ForkJoinPool.commonPool-worker-1] INFO  o.s.ui.freemarker.SpringTemplateLoader - SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35ab2314: startup date [Wed May 26 15:13:48 CST 2021]; root of context hierarchy] and template loader path [classpath:/templates/]
+2021-05-26 15:13:50.067 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2021-05-26 15:13:50.164 [ForkJoinPool.commonPool-worker-1] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-05-26 15:13:50.175 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-26 15:13:50.183 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2021-05-26 15:13:50.196 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-26 15:13:50.200 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Started application in 2.547 seconds (JVM running for 3.46)
+2021-05-26 15:13:55.241 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - C:\Users\zyan.zhang\Desktop\副本导入数据.xlsx
+2021-05-26 15:13:59.656 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall
+2021-05-26 15:13:59.656 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - sort1
+2021-05-26 15:13:59.656 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall1
+2021-05-26 15:13:59.657 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scale1
+2021-05-26 15:14:15.928 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 59
+15
+64
+
+2021-05-26 15:14:40.163 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 110
+2
+204
+
+2021-05-26 15:16:14.187 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - shibai
+2021-05-26 15:16:17.788 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Starting application on hz-zyan-zhang with PID 2072 (started by zyan.zhang in E:\venus)
+2021-05-26 15:16:17.792 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2021-05-26 15:16:17.832 [ForkJoinPool.commonPool-worker-1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@fb370a6: startup date [Wed May 26 15:16:17 CST 2021]; root of context hierarchy
+2021-05-26 15:16:18.832 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-26 15:16:18.844 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-26 15:16:18.912 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-26 15:16:18.912 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+2021-05-26 15:16:18.917 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Java\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\VMware\VMware Workstation\bin\;E:\software\xftp\;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Java\bin;C:\Java\jre\bin;E:\software\Git\cmd;C:\Program Files\TortoiseSVN\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts;E:\software\apache-maven-3.8.1\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\;C:\Users\zyan.zhang\AppData\Local\Microsoft\WindowsApps;;.]
+2021-05-26 15:16:19.015 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-26 15:16:19.015 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1183 ms
+2021-05-26 15:16:19.086 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2021-05-26 15:16:19.121 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-05-26 15:16:19.122 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-05-26 15:16:19.122 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-05-26 15:16:19.122 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-05-26 15:16:19.300 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:16:19.490 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@fb370a6: startup date [Wed May 26 15:16:17 CST 2021]; root of context hierarchy
+2021-05-26 15:16:19.552 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-05-26 15:16:19.552 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-05-26 15:16:19.575 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/file/File.fxml] onto handler '/fxml/file/File.fxml'
+2021-05-26 15:16:19.576 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/Main.fxml] onto handler '/fxml/Main.fxml'
+2021-05-26 15:16:19.579 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:16:19.580 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:16:19.728 [ForkJoinPool.commonPool-worker-1] INFO  o.s.ui.freemarker.SpringTemplateLoader - SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@fb370a6: startup date [Wed May 26 15:16:17 CST 2021]; root of context hierarchy] and template loader path [classpath:/templates/]
+2021-05-26 15:16:19.730 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2021-05-26 15:16:19.823 [ForkJoinPool.commonPool-worker-1] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-05-26 15:16:19.837 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-26 15:16:19.846 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2021-05-26 15:16:19.861 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-26 15:16:19.865 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Started application in 2.628 seconds (JVM running for 3.571)
+2021-05-26 15:16:24.214 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - C:\Users\zyan.zhang\Desktop\副本导入数据.xlsx
+2021-05-26 15:16:28.449 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall
+2021-05-26 15:16:28.450 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - sort1
+2021-05-26 15:16:28.450 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall1
+2021-05-26 15:16:28.450 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scale1
+2021-05-26 15:16:33.636 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 59
+15
+64
+
+2021-05-26 15:16:46.425 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 110
+2
+204
+
+2021-05-26 15:17:56.509 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - shibai
+2021-05-26 15:18:01.348 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Starting application on hz-zyan-zhang with PID 16736 (started by zyan.zhang in E:\venus)
+2021-05-26 15:18:01.351 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2021-05-26 15:18:01.388 [ForkJoinPool.commonPool-worker-1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@65ccc52d: startup date [Wed May 26 15:18:01 CST 2021]; root of context hierarchy
+2021-05-26 15:18:02.319 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-26 15:18:02.331 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-26 15:18:02.341 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-26 15:18:02.341 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+2021-05-26 15:18:02.345 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Java\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\VMware\VMware Workstation\bin\;E:\software\xftp\;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Java\bin;C:\Java\jre\bin;E:\software\Git\cmd;C:\Program Files\TortoiseSVN\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts;E:\software\apache-maven-3.8.1\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\;C:\Users\zyan.zhang\AppData\Local\Microsoft\WindowsApps;;.]
+2021-05-26 15:18:02.507 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-26 15:18:02.507 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1119 ms
+2021-05-26 15:18:02.585 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2021-05-26 15:18:02.650 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-05-26 15:18:02.651 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-05-26 15:18:02.651 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-05-26 15:18:02.651 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-05-26 15:18:02.821 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:18:02.991 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@65ccc52d: startup date [Wed May 26 15:18:01 CST 2021]; root of context hierarchy
+2021-05-26 15:18:03.045 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-05-26 15:18:03.047 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-05-26 15:18:03.067 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/file/File.fxml] onto handler '/fxml/file/File.fxml'
+2021-05-26 15:18:03.067 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/Main.fxml] onto handler '/fxml/Main.fxml'
+2021-05-26 15:18:03.071 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:18:03.072 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 15:18:03.222 [ForkJoinPool.commonPool-worker-1] INFO  o.s.ui.freemarker.SpringTemplateLoader - SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@65ccc52d: startup date [Wed May 26 15:18:01 CST 2021]; root of context hierarchy] and template loader path [classpath:/templates/]
+2021-05-26 15:18:03.223 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2021-05-26 15:18:03.317 [ForkJoinPool.commonPool-worker-1] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-05-26 15:18:03.330 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-26 15:18:03.338 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2021-05-26 15:18:03.354 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-26 15:18:03.357 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Started application in 2.552 seconds (JVM running for 3.472)
+2021-05-26 15:19:13.075 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - C:\Users\zyan.zhang\Desktop\副本导入数据.xlsx
+2021-05-26 15:19:17.168 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall
+2021-05-26 15:19:17.168 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - sort1
+2021-05-26 15:19:17.168 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall1
+2021-05-26 15:19:17.168 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scale1
+2021-05-26 15:19:23.100 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 59
+15
+64
+
+2021-05-26 15:19:27.192 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 110
+2
+204
+
+2021-05-26 15:19:28.549 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 152
+0
+152
+
+2021-05-26 15:19:28.642 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleover
+2021-05-26 15:19:28.710 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall2
+2021-05-26 15:19:28.741 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scale1
+2021-05-26 15:19:33.244 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 58
+16
+104
+
+2021-05-26 15:19:34.693 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 78
+13
+108
+
+2021-05-26 15:19:36.670 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 86
+8
+112
+
+2021-05-26 15:19:38.650 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 82
+3
+134
+
+2021-05-26 15:19:39.838 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 116
+1
+154
+
+2021-05-26 15:19:40.927 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 41
+0
+41
+
+2021-05-26 15:19:41.025 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleover
+2021-05-26 15:30:08.058 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - C:\Users\zyan.zhang\Desktop\副本导入数据.xlsx
+2021-05-26 15:30:10.738 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall
+2021-05-26 15:30:10.739 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - sort1
+2021-05-26 15:30:10.739 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall1
+2021-05-26 15:30:10.739 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scale1
+2021-05-26 15:30:17.262 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 59
+15
+64
+
+2021-05-26 15:30:21.353 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 110
+2
+204
+
+2021-05-26 15:30:22.706 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 152
+0
+152
+
+2021-05-26 15:30:22.803 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleover
+2021-05-26 15:30:22.869 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall2
+2021-05-26 15:30:22.902 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scale1
+2021-05-26 15:30:24.390 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 58
+17
+104
+
+2021-05-26 15:30:25.842 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 78
+14
+108
+
+2021-05-26 15:30:27.821 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 86
+9
+112
+
+2021-05-26 15:30:30.066 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 95
+3
+147
+
+2021-05-26 15:30:31.252 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 116
+1
+154
+
+2021-05-26 15:30:32.344 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 41
+0
+41
+
+2021-05-26 15:30:32.438 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleover
+2021-05-26 15:30:32.571 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - shibai
+2021-05-26 17:36:02.285 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Starting application on hz-zyan-zhang with PID 9420 (started by zyan.zhang in E:\venus)
+2021-05-26 17:36:02.287 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2021-05-26 17:36:02.321 [ForkJoinPool.commonPool-worker-1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@ce60ac3: startup date [Wed May 26 17:36:02 CST 2021]; root of context hierarchy
+2021-05-26 17:36:03.245 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-26 17:36:03.256 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-26 17:36:03.266 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-26 17:36:03.266 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+2021-05-26 17:36:03.269 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Java\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\VMware\VMware Workstation\bin\;E:\software\xftp\;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Java\bin;C:\Java\jre\bin;E:\software\Git\cmd;C:\Program Files\TortoiseSVN\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts;E:\software\apache-maven-3.8.1\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\;C:\Users\zyan.zhang\AppData\Local\Microsoft\WindowsApps;;.]
+2021-05-26 17:36:03.400 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-26 17:36:03.400 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1079 ms
+2021-05-26 17:36:03.468 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2021-05-26 17:36:03.473 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-05-26 17:36:03.473 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-05-26 17:36:03.473 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-05-26 17:36:03.474 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-05-26 17:36:03.707 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 17:36:03.872 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@ce60ac3: startup date [Wed May 26 17:36:02 CST 2021]; root of context hierarchy
+2021-05-26 17:36:03.925 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-05-26 17:36:03.926 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-05-26 17:36:03.948 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/file/File.fxml] onto handler '/fxml/file/File.fxml'
+2021-05-26 17:36:03.949 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/Main.fxml] onto handler '/fxml/Main.fxml'
+2021-05-26 17:36:03.953 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 17:36:03.953 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 17:36:04.099 [ForkJoinPool.commonPool-worker-1] INFO  o.s.ui.freemarker.SpringTemplateLoader - SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@ce60ac3: startup date [Wed May 26 17:36:02 CST 2021]; root of context hierarchy] and template loader path [classpath:/templates/]
+2021-05-26 17:36:04.100 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2021-05-26 17:36:04.171 [ForkJoinPool.commonPool-worker-1] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-05-26 17:36:04.183 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-26 17:36:04.190 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2021-05-26 17:36:04.204 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-26 17:36:04.208 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Started application in 2.43 seconds (JVM running for 3.334)
+2021-05-26 17:36:26.078 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - C:\Users\zyan.zhang\Desktop\副本导入数据.xlsx
+2021-05-26 17:36:30.213 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall
+2021-05-26 17:36:30.214 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - sort1
+2021-05-26 17:36:30.214 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall1
+2021-05-26 17:36:30.214 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scale1
+2021-05-26 17:36:30.215 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 59
+15
+64
+
+2021-05-26 17:36:30.215 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 110
+2
+204
+
+2021-05-26 17:36:30.215 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 152
+0
+152
+
+2021-05-26 17:36:30.215 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleover
+2021-05-26 17:36:30.216 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall2
+2021-05-26 17:36:30.216 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scale1
+2021-05-26 17:36:30.216 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 58
+16
+104
+
+2021-05-26 17:36:30.216 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 78
+13
+108
+
+2021-05-26 17:36:30.216 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 86
+8
+112
+
+2021-05-26 17:36:30.216 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 82
+3
+134
+
+2021-05-26 17:36:30.216 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 116
+1
+154
+
+2021-05-26 17:36:30.216 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 41
+0
+41
+
+2021-05-26 17:36:30.216 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleover
+2021-05-26 17:36:30.260 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.261 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.261 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.261 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.261 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.261 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.261 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.261 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.261 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.261 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.261 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.261 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.261 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.262 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.262 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.262 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.262 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.262 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.262 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.262 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.262 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.262 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.262 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.262 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.262 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.262 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.263 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.264 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.265 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.265 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.265 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.265 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.265 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.265 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.265 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.265 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.265 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.265 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.265 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.265 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.265 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.265 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.266 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.267 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.268 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.268 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.268 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.268 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.268 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.268 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.268 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.268 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.268 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.268 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.268 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.268 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.268 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.268 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.268 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.269 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.270 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.271 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.272 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.273 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.274 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.275 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.275 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.275 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.275 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.275 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.275 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.275 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.275 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.276 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.277 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.278 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.279 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:36:30.280 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 45
+2021-05-26 17:39:13.080 [Thread-8] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@ce60ac3: startup date [Wed May 26 17:36:02 CST 2021]; root of context hierarchy
+2021-05-26 17:39:17.449 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Starting application on hz-zyan-zhang with PID 14612 (started by zyan.zhang in E:\venus)
+2021-05-26 17:39:17.452 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2021-05-26 17:39:17.489 [ForkJoinPool.commonPool-worker-1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@19b62622: startup date [Wed May 26 17:39:17 CST 2021]; root of context hierarchy
+2021-05-26 17:39:18.485 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-26 17:39:18.496 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-26 17:39:18.508 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-26 17:39:18.509 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+2021-05-26 17:39:18.513 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Java\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\VMware\VMware Workstation\bin\;E:\software\xftp\;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Java\bin;C:\Java\jre\bin;E:\software\Git\cmd;C:\Program Files\TortoiseSVN\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts;E:\software\apache-maven-3.8.1\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\;C:\Users\zyan.zhang\AppData\Local\Microsoft\WindowsApps;;.]
+2021-05-26 17:39:18.621 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-26 17:39:18.621 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1132 ms
+2021-05-26 17:39:18.698 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2021-05-26 17:39:18.705 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-05-26 17:39:18.705 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-05-26 17:39:18.705 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-05-26 17:39:18.706 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-05-26 17:39:18.953 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 17:39:19.136 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@19b62622: startup date [Wed May 26 17:39:17 CST 2021]; root of context hierarchy
+2021-05-26 17:39:19.195 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-05-26 17:39:19.196 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-05-26 17:39:19.216 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/file/File.fxml] onto handler '/fxml/file/File.fxml'
+2021-05-26 17:39:19.216 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/Main.fxml] onto handler '/fxml/Main.fxml'
+2021-05-26 17:39:19.221 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 17:39:19.222 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 17:39:19.372 [ForkJoinPool.commonPool-worker-1] INFO  o.s.ui.freemarker.SpringTemplateLoader - SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@19b62622: startup date [Wed May 26 17:39:17 CST 2021]; root of context hierarchy] and template loader path [classpath:/templates/]
+2021-05-26 17:39:19.373 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2021-05-26 17:39:19.448 [ForkJoinPool.commonPool-worker-1] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-05-26 17:39:19.462 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-26 17:39:19.471 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2021-05-26 17:39:19.486 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-26 17:39:19.490 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Started application in 2.563 seconds (JVM running for 3.509)
+2021-05-26 17:39:27.740 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - C:\Users\zyan.zhang\Desktop\副本导入数据.xlsx
+2021-05-26 17:39:32.346 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall
+2021-05-26 17:39:32.347 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - sort1
+2021-05-26 17:39:32.347 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall1
+2021-05-26 17:39:32.347 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scale1
+2021-05-26 17:39:32.348 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 59
+15
+64
+
+2021-05-26 17:39:32.348 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 110
+2
+204
+
+2021-05-26 17:39:32.349 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 152
+0
+152
+
+2021-05-26 17:39:32.349 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleover
+2021-05-26 17:39:32.349 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall2
+2021-05-26 17:39:32.349 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scale1
+2021-05-26 17:39:32.349 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 58
+16
+104
+
+2021-05-26 17:39:32.349 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 78
+13
+108
+
+2021-05-26 17:39:32.349 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 86
+8
+112
+
+2021-05-26 17:39:32.349 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 82
+3
+134
+
+2021-05-26 17:39:32.349 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 116
+1
+154
+
+2021-05-26 17:39:32.349 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 41
+0
+41
+
+2021-05-26 17:39:32.349 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleover
+2021-05-26 17:39:32.393 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊金色阳光店
+2021-05-26 17:39:32.393 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊中环城店
+2021-05-26 17:39:32.394 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 文柱网咖
+2021-05-26 17:39:32.394 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 宝可梦网吧
+2021-05-26 17:39:32.394 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊极锦
+2021-05-26 17:39:32.394 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊建工学院店
+2021-05-26 17:39:32.394 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊望湖城店
+2021-05-26 17:39:32.394 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 滨菓罍街店
+2021-05-26 17:39:32.394 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 古网网咖
+2021-05-26 17:39:32.395 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 四合网苑南七店
+2021-05-26 17:39:32.395 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 文柱网咖
+2021-05-26 17:39:32.395 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 一城一家酒店
+2021-05-26 17:39:32.395 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 哈哈电竞宣瑜店(火车站)
+2021-05-26 17:39:32.395 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 摩菲网咖
+2021-05-26 17:39:32.395 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊久隆店(融科城)
+2021-05-26 17:39:32.396 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊佩玖店华侨城
+2021-05-26 17:39:32.396 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 易龙网吧
+2021-05-26 17:39:32.396 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 娱人网咖永和家园店
+2021-05-26 17:39:32.396 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 糯米网咖逍遥店
+2021-05-26 17:39:32.396 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊繁华大道店(果帅)
+2021-05-26 17:39:32.396 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 精风电竞酒店
+2021-05-26 17:39:32.396 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 四合网苑寻梦店
+2021-05-26 17:39:32.397 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 电信肥东竞技网吧
+2021-05-26 17:39:32.397 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 电信嘿啪竞游咖
+2021-05-26 17:39:32.397 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 电信提莫网咖文星店
+2021-05-26 17:39:32.397 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 电信网客网吧
+2021-05-26 17:39:32.397 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 电信网鱼网咖禹州店
+2021-05-26 17:39:32.397 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 电信游侠网咖
+2021-05-26 17:39:32.397 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 杰拉网咖飞狐店
+2021-05-26 17:39:32.397 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊红色柠檬树港澳店
+2021-05-26 17:39:32.397 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 帅帅猴网吧
+2021-05-26 17:39:32.398 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 指南针高新店
+2021-05-26 17:39:32.398 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊红玺台店
+2021-05-26 17:39:32.398 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 指南针高新店
+2021-05-26 17:39:32.398 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊安农大网络之翼店
+2021-05-26 17:39:32.398 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊咕噜店
+2021-05-26 17:39:32.398 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊龙岗游园店
+2021-05-26 17:39:32.398 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊绿地瀛海店
+2021-05-26 17:39:32.398 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 合肥星云科技
+2021-05-26 17:39:32.399 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊繁华大道店(果帅)
+2021-05-26 17:39:32.399 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊红色柠檬树港澳店
+2021-05-26 17:39:32.399 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊大摩广场店
+2021-05-26 17:39:32.399 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊万达茂店
+2021-05-26 17:39:32.399 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊世纪金源店
+2021-05-26 17:39:32.399 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊和园店
+2021-05-26 17:43:21.610 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Starting application on hz-zyan-zhang with PID 17208 (started by zyan.zhang in E:\venus)
+2021-05-26 17:43:21.614 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2021-05-26 17:43:21.648 [ForkJoinPool.commonPool-worker-1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35ab2314: startup date [Wed May 26 17:43:21 CST 2021]; root of context hierarchy
+2021-05-26 17:43:22.629 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-26 17:43:22.641 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-26 17:43:22.649 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-26 17:43:22.650 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+2021-05-26 17:43:22.655 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Java\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\VMware\VMware Workstation\bin\;E:\software\xftp\;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Java\bin;C:\Java\jre\bin;E:\software\Git\cmd;C:\Program Files\TortoiseSVN\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts;E:\software\apache-maven-3.8.1\bin;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\zyan.zhang\AppData\Local\Programs\Python\Python37\;C:\Users\zyan.zhang\AppData\Local\Microsoft\WindowsApps;;.]
+2021-05-26 17:43:22.753 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-26 17:43:22.754 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1106 ms
+2021-05-26 17:43:22.819 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2021-05-26 17:43:22.823 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-05-26 17:43:22.824 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-05-26 17:43:22.824 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-05-26 17:43:22.824 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-05-26 17:43:23.047 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 17:43:23.213 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35ab2314: startup date [Wed May 26 17:43:21 CST 2021]; root of context hierarchy
+2021-05-26 17:43:23.269 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-05-26 17:43:23.270 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-05-26 17:43:23.289 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/file/File.fxml] onto handler '/fxml/file/File.fxml'
+2021-05-26 17:43:23.289 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.BeanNameUrlHandlerMapping - Mapped URL path [/fxml/Main.fxml] onto handler '/fxml/Main.fxml'
+2021-05-26 17:43:23.294 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 17:43:23.294 [ForkJoinPool.commonPool-worker-1] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-05-26 17:43:23.437 [ForkJoinPool.commonPool-worker-1] INFO  o.s.ui.freemarker.SpringTemplateLoader - SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35ab2314: startup date [Wed May 26 17:43:21 CST 2021]; root of context hierarchy] and template loader path [classpath:/templates/]
+2021-05-26 17:43:23.439 [ForkJoinPool.commonPool-worker-1] INFO  o.s.w.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2021-05-26 17:43:23.511 [ForkJoinPool.commonPool-worker-1] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-05-26 17:43:23.526 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-05-26 17:43:23.536 [ForkJoinPool.commonPool-worker-1] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2021-05-26 17:43:23.556 [ForkJoinPool.commonPool-worker-1] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-26 17:43:23.559 [ForkJoinPool.commonPool-worker-1] INFO  org.springframework.boot.SpringApplication - Started application in 2.477 seconds (JVM running for 3.335)
+2021-05-26 17:43:31.592 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - C:\Users\zyan.zhang\Desktop\副本导入数据.xlsx
+2021-05-26 17:43:36.802 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall
+2021-05-26 17:43:36.802 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - sort1
+2021-05-26 17:43:36.802 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall1
+2021-05-26 17:43:36.803 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scale1
+2021-05-26 17:43:36.804 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 59
+15
+64
+
+2021-05-26 17:43:36.804 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 110
+2
+204
+
+2021-05-26 17:43:36.804 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 152
+0
+152
+
+2021-05-26 17:43:36.804 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleover
+2021-05-26 17:43:36.804 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleall2
+2021-05-26 17:43:36.804 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scale1
+2021-05-26 17:43:36.804 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 58
+16
+104
+
+2021-05-26 17:43:36.805 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 78
+13
+108
+
+2021-05-26 17:43:36.805 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 86
+8
+112
+
+2021-05-26 17:43:36.805 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 82
+3
+134
+
+2021-05-26 17:43:36.805 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 116
+1
+154
+
+2021-05-26 17:43:36.805 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - 41
+0
+41
+
+2021-05-26 17:43:36.805 [JavaFX Application Thread] INFO  cn.chenxing.module.main.controller.MainController - scaleover
+2021-05-26 17:43:36.848 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊金色阳光店
+2021-05-26 17:43:36.849 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊中环城店
+2021-05-26 17:43:36.849 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 文柱网咖
+2021-05-26 17:43:36.849 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 宝可梦网吧
+2021-05-26 17:43:36.849 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊极锦
+2021-05-26 17:43:36.849 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊建工学院店
+2021-05-26 17:43:36.849 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊望湖城店
+2021-05-26 17:43:36.849 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 滨菓罍街店
+2021-05-26 17:43:36.850 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 古网网咖
+2021-05-26 17:43:36.850 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 四合网苑南七店
+2021-05-26 17:43:36.850 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 文柱网咖
+2021-05-26 17:43:36.850 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 一城一家酒店
+2021-05-26 17:43:36.850 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 哈哈电竞宣瑜店(火车站)
+2021-05-26 17:43:36.850 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 摩菲网咖
+2021-05-26 17:43:36.850 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊久隆店(融科城)
+2021-05-26 17:43:36.850 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊佩玖店华侨城
+2021-05-26 17:43:36.851 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 易龙网吧
+2021-05-26 17:43:36.851 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 娱人网咖永和家园店
+2021-05-26 17:43:36.851 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 糯米网咖逍遥店
+2021-05-26 17:43:36.851 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊繁华大道店(果帅)
+2021-05-26 17:43:36.851 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 精风电竞酒店
+2021-05-26 17:43:36.851 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 四合网苑寻梦店
+2021-05-26 17:43:36.851 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 电信肥东竞技网吧
+2021-05-26 17:43:36.852 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 电信嘿啪竞游咖
+2021-05-26 17:43:36.852 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 电信提莫网咖文星店
+2021-05-26 17:43:36.852 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 电信网客网吧
+2021-05-26 17:43:36.852 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 电信网鱼网咖禹州店
+2021-05-26 17:43:36.852 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 电信游侠网咖
+2021-05-26 17:43:36.852 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 杰拉网咖飞狐店
+2021-05-26 17:43:36.852 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊红色柠檬树港澳店
+2021-05-26 17:43:36.852 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 帅帅猴网吧
+2021-05-26 17:43:36.852 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 指南针高新店
+2021-05-26 17:43:36.852 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊红玺台店
+2021-05-26 17:43:36.853 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 指南针高新店
+2021-05-26 17:43:36.853 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊安农大网络之翼店
+2021-05-26 17:43:36.853 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊咕噜店
+2021-05-26 17:43:36.853 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊龙岗游园店
+2021-05-26 17:43:36.853 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊绿地瀛海店
+2021-05-26 17:43:36.853 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 合肥星云科技
+2021-05-26 17:43:36.853 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊繁华大道店(果帅)
+2021-05-26 17:43:36.853 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊红色柠檬树港澳店
+2021-05-26 17:43:36.853 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊大摩广场店
+2021-05-26 17:43:36.853 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊万达茂店
+2021-05-26 17:43:36.853 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊世纪金源店
+2021-05-26 17:43:36.854 [JavaFX Application Thread] INFO  cn.chenxing.utils.ExcelUtil - 树呆熊和园店
+2021-05-26 20:13:56.746 [Thread-8] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35ab2314: startup date [Wed May 26 17:43:21 CST 2021]; root of context hierarchy

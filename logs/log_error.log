@@ -1,0 +1,154 @@
+2021-05-24 10:36:32.419 [JavaFX Application Thread] ERROR d.f.jfxsupport.AbstractJavaFxApplicationSupport - Failed to load application: 
+java.lang.IllegalStateException: Cannot load main
+	at de.felixroske.jfxsupport.AbstractFxmlView.loadSynchronously(AbstractFxmlView.java:161)
+	at de.felixroske.jfxsupport.AbstractFxmlView.ensureFxmlLoaderInitialized(AbstractFxmlView.java:176)
+	at de.felixroske.jfxsupport.AbstractFxmlView.getView(AbstractFxmlView.java:188)
+	at cn.chenxing.module.main.view.MainView.getView(MainView.java:26)
+	at de.felixroske.jfxsupport.AbstractJavaFxApplicationSupport.showView(AbstractJavaFxApplicationSupport.java:217)
+	at de.felixroske.jfxsupport.AbstractJavaFxApplicationSupport.showInitialView(AbstractJavaFxApplicationSupport.java:193)
+	at de.felixroske.jfxsupport.AbstractJavaFxApplicationSupport.lambda$start$5(AbstractJavaFxApplicationSupport.java:159)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$5(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$6(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$4(WinApplication.java:185)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javafx.fxml.LoadException: 
+/E:/venus/venus-start/target/classes/fxml/Main.fxml
+
+	at javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2601)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2579)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409)
+	at de.felixroske.jfxsupport.AbstractFxmlView.loadSynchronously(AbstractFxmlView.java:159)
+	... 13 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at cn.chenxing.module.main.controller.MainController.init(MainController.java:102)
+	at cn.chenxing.module.main.controller.MainController.initialize(MainController.java:91)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
+	... 16 common frames omitted
+2021-05-24 18:46:51.469 [JavaFX Application Thread] ERROR d.f.jfxsupport.AbstractJavaFxApplicationSupport - Failed to load application: 
+java.lang.IllegalStateException: Cannot load main
+	at de.felixroske.jfxsupport.AbstractFxmlView.loadSynchronously(AbstractFxmlView.java:161)
+	at de.felixroske.jfxsupport.AbstractFxmlView.ensureFxmlLoaderInitialized(AbstractFxmlView.java:176)
+	at de.felixroske.jfxsupport.AbstractFxmlView.getView(AbstractFxmlView.java:188)
+	at cn.chenxing.module.main.view.MainView.getView(MainView.java:26)
+	at de.felixroske.jfxsupport.AbstractJavaFxApplicationSupport.showView(AbstractJavaFxApplicationSupport.java:217)
+	at de.felixroske.jfxsupport.AbstractJavaFxApplicationSupport.showInitialView(AbstractJavaFxApplicationSupport.java:193)
+	at de.felixroske.jfxsupport.AbstractJavaFxApplicationSupport.lambda$start$5(AbstractJavaFxApplicationSupport.java:159)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$5(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$6(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$4(WinApplication.java:185)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javafx.fxml.LoadException: 
+/E:/venus/venus-start/target/classes/fxml/Main.fxml
+
+	at javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2601)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2579)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409)
+	at de.felixroske.jfxsupport.AbstractFxmlView.loadSynchronously(AbstractFxmlView.java:159)
+	... 13 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at cn.chenxing.module.main.controller.MainController.init(MainController.java:102)
+	at cn.chenxing.module.main.controller.MainController.initialize(MainController.java:94)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
+	... 16 common frames omitted
+2021-05-24 18:47:21.560 [JavaFX Application Thread] ERROR d.f.jfxsupport.AbstractJavaFxApplicationSupport - Failed to load application: 
+java.lang.IllegalStateException: Cannot load main
+	at de.felixroske.jfxsupport.AbstractFxmlView.loadSynchronously(AbstractFxmlView.java:161)
+	at de.felixroske.jfxsupport.AbstractFxmlView.ensureFxmlLoaderInitialized(AbstractFxmlView.java:176)
+	at de.felixroske.jfxsupport.AbstractFxmlView.getView(AbstractFxmlView.java:188)
+	at cn.chenxing.module.main.view.MainView.getView(MainView.java:26)
+	at de.felixroske.jfxsupport.AbstractJavaFxApplicationSupport.showView(AbstractJavaFxApplicationSupport.java:217)
+	at de.felixroske.jfxsupport.AbstractJavaFxApplicationSupport.showInitialView(AbstractJavaFxApplicationSupport.java:193)
+	at de.felixroske.jfxsupport.AbstractJavaFxApplicationSupport.lambda$start$5(AbstractJavaFxApplicationSupport.java:159)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$5(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$6(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$4(WinApplication.java:185)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javafx.fxml.LoadException: 
+/E:/venus/venus-start/target/classes/fxml/Main.fxml
+
+	at javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2601)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2579)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409)
+	at de.felixroske.jfxsupport.AbstractFxmlView.loadSynchronously(AbstractFxmlView.java:159)
+	... 13 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at cn.chenxing.module.main.controller.MainController.init(MainController.java:102)
+	at cn.chenxing.module.main.controller.MainController.initialize(MainController.java:94)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
+	... 16 common frames omitted
+2021-05-25 15:15:11.054 [ForkJoinPool.commonPool-worker-1] ERROR org.apache.catalina.core.StandardService - Failed to start connector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:256)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:198)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at de.felixroske.jfxsupport.AbstractJavaFxApplicationSupport.lambda$init$1(AbstractJavaFxApplicationSupport.java:122)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run$$$capture(CompletableFuture.java:1604)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1596)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1067)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1703)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1020)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 20 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:444)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:225)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:219)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1151)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:591)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1018)
+	... 21 common frames omitted
+2021-05-25 15:15:11.091 [ForkJoinPool.commonPool-worker-1] ERROR d.f.jfxsupport.AbstractJavaFxApplicationSupport - Failed to load spring application context: 
+java.util.concurrent.CompletionException: org.springframework.boot.web.embedded.tomcat.ConnectorStartFailedException: Connector configured to listen on port 8080 failed to start
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run$$$capture(CompletableFuture.java:1606)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1596)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1067)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1703)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+Caused by: org.springframework.boot.web.embedded.tomcat.ConnectorStartFailedException: Connector configured to listen on port 8080 failed to start
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.checkThatConnectorsHaveStarted(TomcatWebServer.java:228)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:203)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at de.felixroske.jfxsupport.AbstractJavaFxApplicationSupport.lambda$init$1(AbstractJavaFxApplicationSupport.java:122)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run$$$capture(CompletableFuture.java:1604)
+	... 6 common frames omitted

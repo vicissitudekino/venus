@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="venus-common" />
+        <module name="venus-start" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="venus" target="1.8" />
+      <module name="venus-common" target="1.8" />
+      <module name="venus-start" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="venus-common" options="-parameters" />
+      <module name="venus-start" options="-parameters" />
+    </option>
+  </component>
+</project>
