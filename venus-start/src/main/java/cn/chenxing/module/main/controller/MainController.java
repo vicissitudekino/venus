@@ -27,6 +27,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.util.Callback;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
+import org.apache.logging.log4j.util.PropertySource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 
@@ -89,14 +90,14 @@ public class MainController implements Initializable {
     private TableColumn<Cybercafe, String> cybercafeColumn;
 
     public List<Cybercafe> cybercafeData =new ArrayList<>();
-    
+
     private List<Cybercafe> resultList27 =new ArrayList<>();
     private List<Cybercafe> resultList37 =new ArrayList<>();
     private List<Cybercafe> resultListEdit27 =new ArrayList<>();
     private List<Cybercafe> resultListEdit37 =new ArrayList<>();
     private List<Cybercafe> resultListEdited27 =new ArrayList<>();
     private List<Cybercafe> resultListEdited37 =new ArrayList<>();
-    private List<Factory> factoryData = FXCollections.observableArrayList();
+    private List<Factory> factoryData = new ArrayList<>();
 
     @Autowired
     MainService mainService;
@@ -212,13 +213,13 @@ public class MainController implements Initializable {
     }
 
     private void scaleAll(){
-        log.info("scaleall");
         cybercafeSort();
-        log.info("scaleall1");
         scale(resultList27);
-        log.info("scaleall2");
         scale(resultList37);
-        }
+        scaleEdit(resultListEdited27,resultList27);
+        scaleEdit(resultListEdited37,resultList27);
+
+    }
 
 
     private void scaleBefore(){
@@ -290,6 +291,66 @@ public class MainController implements Initializable {
             log.info(String.format("%s\n%s\n%s\n",m,n,t));
         }
         log.info("scaleover");
+    }
+
+    private void scaleEdit(List<Cybercafe> resultList,List<Cybercafe> resultEditList) {
+        log.info("scale1");
+        int y=0;
+        List<Cybercafe> cybercafeSort = resultList.stream().sorted(Comparator.comparing(Cybercafe::getDisklessNums)).collect(Collectors.toList());
+        List<Cybercafe> cybercafeEditSort = resultEditList.stream().sorted(Comparator.comparing(Cybercafe::getDisklessNums)).collect(Collectors.toList());
+        Map<Integer,List<Cybercafe>> cybercafeGroup=resultEditList.stream().collect(Collectors.groupingBy(Cybercafe::getFactoryId));
+        List<Factory> factorySort=factoryData.stream().sorted(Comparator.comparing(Factory::getNumber)).collect(Collectors.toList());
+        while(cybercafeSort.size()>0){
+            int num1=factoryData.get(y).getNumber();
+            Double scaleProportion=Double.parseDouble(this.proportion.getText());
+            Double num2=Double.valueOf(scaleProportion)*num1;
+            Integer num3=num2.intValue();
+            int m=0;
+            int t=0;
+            int n=cybercafeSort.size()-1;
+            List<Integer> terminalNumsGroup=new ArrayList<>();
+            List<Integer> maxDisklessNumsGroup=new ArrayList<>();
+            for(int z=cybercafeGroup.size()-1;z>=0;z--){
+                Integer sum= cybercafeGroup.get(z) .stream().collect(Collectors.summingInt(Cybercafe::getTerminalNums));
+                Integer maxSum=cybercafeGroup.get(z).stream().mapToInt(Cybercafe::getDisklessNums).max().getAsInt();
+                terminalNumsGroup.add(sum);
+                maxDisklessNumsGroup.add(maxSum);
+            }
+            for(int s=cybercafeSort.size()-1;s>0;s--){
+                for(int l=cybercafeGroup.size();l>0;l--){
+                    Integer num=cybercafeEditSort.get(s).getTerminalNums()+terminalNumsGroup.get(s);
+                    if(cybercafeEditSort.get(s).getDisklessNums()<=maxDisklessNumsGroup.get(l)&&num<=num3){
+                        
+                    }
+                }
+
+
+//            for(int x=0;x<num3;) {
+//                while (t < num3) {
+//                    t = m + cybercafeSort.get(n).getTerminalNums();
+//                    if (t < num3) {
+//                        m += cybercafeSort.get(n).getTerminalNums();
+//                        cybercafeSort.get(n).setFactoryId(y);
+//                        cybercafeSort.remove(n);
+//                        if (n == 0) {
+//                            break;
+//                        } else {
+//                            n--;
+//                        }
+//
+//                    }
+//                }
+//                if(t>num3||n==0){
+//                    break;
+//                }
+            }
+            y++;
+            Factory factory=new Factory(y,String.valueOf(y),num3);
+            factoryData.add(factory);
+            this.factoryData.add(factory);
+            log.info(String.format("%s\n%s\n%s\n",m,n,t));
+        }
+
     }
 
 
