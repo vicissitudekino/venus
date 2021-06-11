@@ -217,12 +217,12 @@ public class ExcelUtil {
     }
 
 
-    public static void exportFile(List<Cybercafe> cybercafeData, List<Factory> factoryData,String savePath,ExcelData data) {
+    public static void exportFile(List<Cybercafe> cybercafeData, List<Factory> factoryData,String savePath,ExcelData data,String sheetName) {
         HSSFWorkbook workbook;
 
         try {
             workbook = new HSSFWorkbook();
-            HSSFSheet sheet=workbook.createSheet("sheet1");
+            HSSFSheet sheet=workbook.createSheet(sheetName);
             setColumnWidth(sheet, 8);
             // 创建第一行
             HSSFRow row = sheet.createRow(0);
@@ -243,13 +243,18 @@ public class ExcelUtil {
                 cell.setCellStyle(cellStyle);
                 cell.setCellValue(data.getTitle().get(i));
             }
-
             for(int i=1;i<data.getData().size()+1;i++){
                 Row nextRow = sheet.createRow(i);
                 for(int n=0;n<8;n++){
                     Cell cell2 = nextRow.createCell(n);
                     Cybercafe cybercafe= cybercafeData.get(i-1);
-                    Factory factory= factoryData.get(cybercafe.getFactoryId());
+                    Factory factory=new Factory();
+                    for(int m=0;m<factoryData.size();m++){
+                        Factory factory1= factoryData.get(m);
+                        if(cybercafe.getFactoryId().equals(factory1.getId())){
+                            factory=factoryData.get(m);
+                        }
+                    }
                     if (n == 0) {
                         cell2.setCellValue(cybercafe.getFactoryId());
                     }

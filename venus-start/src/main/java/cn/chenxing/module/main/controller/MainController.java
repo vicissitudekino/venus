@@ -90,6 +90,7 @@ public class MainController implements Initializable {
     private TableColumn<Cybercafe, String> cybercafeColumn;
 
     public List<Cybercafe> cybercafeData =new ArrayList<>();
+    public List<Cybercafe> cybercafeDataEdit =new ArrayList<>();
 
     private List<Cybercafe> resultList27 =new ArrayList<>();
     private List<Cybercafe> resultList37 =new ArrayList<>();
@@ -98,6 +99,7 @@ public class MainController implements Initializable {
     private List<Cybercafe> resultListEdited27 =new ArrayList<>();
     private List<Cybercafe> resultListEdited37 =new ArrayList<>();
     private List<Factory> factoryData = new ArrayList<>();
+    private List<Factory> factoryDataEdit = new ArrayList<>();
 
     @Autowired
     MainService mainService;
@@ -156,12 +158,18 @@ public class MainController implements Initializable {
             while(var5.hasNext()) {
                 List<String> Content = (List)var5.next();
                 this.cybercafeData.add(new Cybercafe(Integer.valueOf(Content.get(0)),(String)Content.get(1),rollNums,(String)Content.get(3),Integer.valueOf(Content.get(4)),Integer.valueOf(Content.get(5)),Integer.valueOf(Content.get(6)),Integer.valueOf(Content.get(7))));
-                while (rollNums<=this.factoryData.size()){
+                this.cybercafeDataEdit.add(new Cybercafe(Integer.valueOf(Content.get(0)),(String)Content.get(1),rollNums,(String)Content.get(3),Integer.valueOf(Content.get(4)),Integer.valueOf(Content.get(5)),Integer.valueOf(Content.get(6)),Integer.valueOf(Content.get(7))));
+                if (rollNums == 1) {
+                    this.factoryDataEdit.add(new Factory(Integer.valueOf(Content.get(0)), (String) Content.get(1), Integer.valueOf(Content.get(2))));
 
-                    if (Integer.valueOf(Content.get(0)).equals(this.factoryData.get(rollNums++).getId())) {
-                        this.factoryData.add(new Factory(Integer.valueOf(Content.get(0)), (String) Content.get(1), Integer.valueOf(Content.get(2))));
-                    }
+                }else{
+                        if (!Integer.valueOf(Content.get(0)).equals(this.factoryDataEdit.get(factoryDataEdit.size()-1).getId())) {
+                            log.info(String.valueOf(factoryDataEdit == null));
+                            this.factoryDataEdit.add(new Factory(Integer.valueOf(Content.get(0)), (String) Content.get(1), Integer.valueOf(Content.get(2))));
+                        }
+
                 }
+                rollNums++;
             }
         }
 
@@ -193,9 +201,10 @@ public class MainController implements Initializable {
             }
 
             try{
-                String afterfile=directoryPath+"\\"+"计算文件.xlsx";
+                String afterfile=directoryPath+"\\"+"计算文件"+System.currentTimeMillis()+".xlsx";
                 this.scaleAll();
-                ExcelUtil.exportFile(this.cybercafeData,this.factoryData,afterfile,data);
+                ExcelUtil.exportFile(this.cybercafeData,this.factoryData,afterfile,data,"最优算法");
+//                ExcelUtil.exportFile(this.cybercafeDataEdit,this.factoryDataEdit,afterfile,data,"基于原先算法");
 //                ExportUtil.excelExport(cybercafeData,"jisuanjieguo",data);
             }catch(Exception e){
                 log.info("shibai");
@@ -214,20 +223,11 @@ public class MainController implements Initializable {
 
     private void scaleAll(){
         cybercafeSort();
-        scale(resultList27);
-        scale(resultList37);
-        scaleEdit(resultListEdited27,resultList27);
-        scaleEdit(resultListEdited37,resultList27);
-
+        scale(resultList27,"27");
+        scale(resultList37,"37");
+//        scaleEdit(resultListEdited27,resultListEdit27);
+//        scaleEdit(resultListEdited37,resultListEdit37);
     }
-
-
-    private void scaleBefore(){
-        List<Cybercafe> editCybercafelist=new ArrayList<>();
-        List<Integer> totalNumber=new ArrayList<>();
-//        Map<String, List<Cybercafe>> groupBy =this.cybercafeData.stream().collect(Collectors.groupingBy(Cybercafe::getFactoryId));
-    }
-
 
     private void cybercafeSort(){
         log.info("sort1");
@@ -246,13 +246,11 @@ public class MainController implements Initializable {
                 }else{
                     resultListEdited27.add(cybercafeData.get(i));
                 }
-
             }
         }
-
     }
 
-    private void scale(List<Cybercafe> resultList) {
+    private void scale(List<Cybercafe> resultList,String group) {
         log.info("scale1");
         int y=0;
         List<Cybercafe> cybercafeSort = resultList.stream().sorted(Comparator.comparing(Cybercafe::getDisklessNums)).collect(Collectors.toList());
@@ -265,12 +263,13 @@ public class MainController implements Initializable {
             int m=0;
             int t=0;
             int n=cybercafeSort.size()-1;
+            String s=group+y;
             for(int x=0;x<num3;) {
                 while (t < num3) {
                     t = m + cybercafeSort.get(n).getTerminalNums();
                     if (t < num3) {
                         m += cybercafeSort.get(n).getTerminalNums();
-                        cybercafeSort.get(n).setFactoryId(y);
+                        cybercafeSort.get(n).setFactoryId(Integer.parseInt(s));
                         cybercafeSort.remove(n);
                         if (n == 0) {
                             break;
@@ -285,53 +284,81 @@ public class MainController implements Initializable {
                 }
             }
             y++;
-            Factory factory=new Factory(y,String.valueOf(y),num3);
+            Factory factory=new Factory(Integer.parseInt(s),s,num3);
+            log.info(String.valueOf(Integer.parseInt(s)));
             factoryList.add(factory);
-            this.factoryData.add(factory);
+            factoryData.add(factory);
             log.info(String.format("%s\n%s\n%s\n",m,n,t));
         }
         log.info("scaleover");
     }
 
     private void scaleEdit(List<Cybercafe> resultList,List<Cybercafe> resultEditList) {
-        log.info("scale1");
-        int y=0;
+        log.info("scale2");
+        int y=factoryDataEdit.size()-1;
         List<Cybercafe> cybercafeSort = resultList.stream().sorted(Comparator.comparing(Cybercafe::getDisklessNums)).collect(Collectors.toList());
         List<Cybercafe> cybercafeEditSort = resultEditList.stream().sorted(Comparator.comparing(Cybercafe::getDisklessNums)).collect(Collectors.toList());
         Map<Integer,List<Cybercafe>> cybercafeGroup=resultEditList.stream().collect(Collectors.groupingBy(Cybercafe::getFactoryId));
-        List<Factory> factorySort=factoryData.stream().sorted(Comparator.comparing(Factory::getNumber)).collect(Collectors.toList());
-        while(cybercafeSort.size()>0){
-            int num1=factoryData.get(y).getNumber();
+        List<Factory> factorySort=factoryDataEdit.stream().sorted(Comparator.comparing(Factory::getNumber)).collect(Collectors.toList());
+        List<Cybercafe> cycybercafeScaleList=new ArrayList<>();
+        while(cybercafeEditSort.size()>0){
+            int num1=factorySort.get(y).getNumber();
             Double scaleProportion=Double.parseDouble(this.proportion.getText());
             Double num2=Double.valueOf(scaleProportion)*num1;
             Integer num3=num2.intValue();
             int m=0;
             int t=0;
-            int n=cybercafeSort.size()-1;
+            int n=cybercafeEditSort.size()-1;
             List<Integer> terminalNumsGroup=new ArrayList<>();
             List<Integer> maxDisklessNumsGroup=new ArrayList<>();
             for(int z=cybercafeGroup.size()-1;z>=0;z--){
-                Integer sum= cybercafeGroup.get(z) .stream().collect(Collectors.summingInt(Cybercafe::getTerminalNums));
+                Integer sum= cybercafeGroup.get(z).stream().collect(Collectors.summingInt(Cybercafe::getTerminalNums));
                 Integer maxSum=cybercafeGroup.get(z).stream().mapToInt(Cybercafe::getDisklessNums).max().getAsInt();
                 terminalNumsGroup.add(sum);
                 maxDisklessNumsGroup.add(maxSum);
+                log.info(terminalNumsGroup.toString());
+                log.info(maxDisklessNumsGroup.toString());
             }
-            for(int s=cybercafeSort.size()-1;s>0;s--){
-                for(int l=cybercafeGroup.size();l>0;l--){
-                    Integer num=cybercafeEditSort.get(s).getTerminalNums()+terminalNumsGroup.get(s);
-                    if(cybercafeEditSort.get(s).getDisklessNums()<=maxDisklessNumsGroup.get(l)&&num<=num3){
-                        
+                for (int l = cybercafeGroup.size(); l > -1; l--) {
+                    Integer num = cybercafeEditSort.get(n).getTerminalNums() + terminalNumsGroup.get(l);
+                    if (cybercafeEditSort.get(n).getDisklessNums() <= maxDisklessNumsGroup.get(l) && num <= num3) {
+                        cybercafeEditSort.get(n).setFactoryId(cybercafeGroup.get(l).get(0).getFactoryId());
+                        cybercafeSort.add(cybercafeEditSort.get(n));
+                        cybercafeEditSort.remove(n);
+                        cybercafeSort = cybercafeSort.stream().sorted(Comparator.comparing(Cybercafe::getDisklessNums)).collect(Collectors.toList());
+                    }else{
+                        if(l==0){
+                            cycybercafeScaleList.add(cybercafeEditSort.get(n));
+                            cybercafeEditSort.remove(n);
+                        }
                     }
                 }
+            }
+
+//        scale(cycybercafeScaleList);
+
+    }
 
 
+//    private void scaleBesides(List<Cybercafe> cycybercafeScaleList){
+//        int y=0;
+//        cycybercafeScaleList=cycybercafeScaleList.stream().sorted(Comparator.comparing(Cybercafe::getDisklessNums)).collect(Collectors.toList());
+//        while(cycybercafeScaleList.size()>0){
+//            int num1=200-cycybercafeScaleList.get(cycybercafeScaleList.size()-1).getDisklessNums();
+//            Double scaleProportion=Double.parseDouble(this.proportion.getText());
+//            Double num2=Double.valueOf(scaleProportion)*num1;
+//            Integer num3=num2.intValue();
+//            int m=0;
+//            int t=0;
+//            int n=cycybercafeScaleList.size()-1;
+//        for(int s=cycybercafeScaleList.size()-1;s>-1;s--){
 //            for(int x=0;x<num3;) {
 //                while (t < num3) {
-//                    t = m + cybercafeSort.get(n).getTerminalNums();
+//                    t = m + cycybercafeScaleList.get(n).getTerminalNums();
 //                    if (t < num3) {
-//                        m += cybercafeSort.get(n).getTerminalNums();
-//                        cybercafeSort.get(n).setFactoryId(y);
-//                        cybercafeSort.remove(n);
+//                        m += cycybercafeScaleList.get(n).getTerminalNums();
+//                        cycybercafeScaleList.get(n).setFactoryId(y);
+//                        cycybercafeScaleList.remove(n);
 //                        if (n == 0) {
 //                            break;
 //                        } else {
@@ -340,19 +367,16 @@ public class MainController implements Initializable {
 //
 //                    }
 //                }
-//                if(t>num3||n==0){
+//                if (t > num3 || n == 0) {
 //                    break;
 //                }
-            }
-            y++;
-            Factory factory=new Factory(y,String.valueOf(y),num3);
-            factoryData.add(factory);
-            this.factoryData.add(factory);
-            log.info(String.format("%s\n%s\n%s\n",m,n,t));
-        }
-
-    }
-
+//            }
+//            y++;
+//            Factory factory=new Factory(y,String.valueOf(y),num3);
+//            factoryDataEdit.add(factory);
+//            this.factoryDataEdit.add(factory);
+//            log.info(String.format("%s\n%s\n%s\n",m,n,t));
+//    }
 
 
 
