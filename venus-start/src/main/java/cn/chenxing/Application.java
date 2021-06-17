@@ -21,7 +21,6 @@ public class Application extends AbstractJavaFxApplicationSupport {
 
     public static void main(String[] args){
         LocalSplashScreen splashScreen = new LocalSplashScreen();
-
         launch(Application.class, MainView.class, splashScreen, args);
     }
 

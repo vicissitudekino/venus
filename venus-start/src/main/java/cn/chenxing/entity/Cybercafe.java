@@ -19,19 +19,19 @@ public class Cybercafe implements Comparable<Cybercafe>{
     private  Integer Nums37;
 
 
-    public Cybercafe (){
-        this((Integer)null, (String)null, (Integer)null, (String)null, (Integer) null, (Integer)null, (Integer)null, (Integer)null);
-    }
+//    public Cybercafe (){
+////        this((Integer)null, (String)null, (Integer)null, (String)null, (Integer) null, (Integer)null, (Integer)null, (Integer)null);
+//    }
 
     public Cybercafe(Integer factoryId,String factoryName,Integer id,String name,Integer terminalNums,Integer disklessNums,Integer Nums27,Integer Nums37) {
-        this.factoryId = new Integer(factoryId);
-        this.factoryName = new String(factoryName);
-        this.id = new Integer(id);
-        this.name = new String(name);
-        this.terminalNums = new Integer(terminalNums);
-        this.disklessNums = new Integer(disklessNums);
-        this.Nums27 = new Integer(Nums27);
-        this.Nums37 = new Integer(Nums37);
+        this.factoryId = factoryId;
+        this.factoryName = factoryName;
+        this.id = id;
+        this.name = name;
+        this.terminalNums =terminalNums;
+        this.disklessNums = disklessNums;
+        this.Nums27 = Nums27;
+        this.Nums37 = Nums37;
     }
 
 

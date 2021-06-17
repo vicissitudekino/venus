@@ -248,11 +248,11 @@ public class ExcelUtil {
                 for(int n=0;n<8;n++){
                     Cell cell2 = nextRow.createCell(n);
                     Cybercafe cybercafe= cybercafeData.get(i-1);
-                    Factory factory=new Factory();
+                    int factoryNumber=0;
                     for(int m=0;m<factoryData.size();m++){
                         Factory factory1= factoryData.get(m);
                         if(cybercafe.getFactoryId().equals(factory1.getId())){
-                            factory=factoryData.get(m);
+                            factoryNumber=factoryData.get(m).getNumber();
                         }
                     }
                     if (n == 0) {
@@ -262,17 +262,16 @@ public class ExcelUtil {
                         cell2.setCellValue(cybercafe.getFactoryName());
                     }
                     if (n == 2) {
-                        cell2.setCellValue(factory.getNumber());
+                        cell2.setCellValue(factoryNumber);
                     }
                     if (n == 3) {
                         cell2.setCellValue(cybercafe.getName());
-                        log.info(cybercafe.getName());
                     }
                     if (n == 4) {
-                        cell2.setCellValue(cybercafe.getDisklessNums());
+                        cell2.setCellValue(cybercafe.getTerminalNums());
                     }
                     if (n == 5) {
-                        cell2.setCellValue(cybercafe.getTerminalNums());
+                        cell2.setCellValue(cybercafe.getDisklessNums());
                     }
                     if (n == 6) {
                         cell2.setCellValue(cybercafe.getNums27());
