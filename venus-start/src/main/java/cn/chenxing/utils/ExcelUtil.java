@@ -217,12 +217,10 @@ public class ExcelUtil {
     }
 
 
-    public static void exportFile(List<Cybercafe> cybercafeData, List<Factory> factoryData,String savePath,ExcelData data,String sheetName) {
-        HSSFWorkbook workbook;
+    public static void exportFile(List<Cybercafe> cybercafeData, List<Factory> factoryData,HSSFSheet sheet,ExcelData data,HSSFWorkbook workbook) {
+
 
         try {
-            workbook = new HSSFWorkbook();
-            HSSFSheet sheet=workbook.createSheet(sheetName);
             setColumnWidth(sheet, 8);
             // 创建第一行
             HSSFRow row = sheet.createRow(0);
@@ -266,6 +264,7 @@ public class ExcelUtil {
                     }
                     if (n == 3) {
                         cell2.setCellValue(cybercafe.getName());
+                        log.info(cybercafe.getName());
                     }
                     if (n == 4) {
                         cell2.setCellValue(cybercafe.getTerminalNums());
@@ -285,15 +284,6 @@ public class ExcelUtil {
         } catch (Exception var5) {
             var5.printStackTrace();
             throw new BizException("创建文件流出错");
-        }
-
-        try {
-            FileOutputStream os = new FileOutputStream(savePath);
-            workbook.write(os);
-            os.close();
-        } catch (IOException var4) {
-            var4.printStackTrace();
-            throw new BizException("生成文件流出错");
         }
     }
 
