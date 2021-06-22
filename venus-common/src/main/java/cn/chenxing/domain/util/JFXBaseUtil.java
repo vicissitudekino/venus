@@ -132,8 +132,8 @@ public class JFXBaseUtil {
      */
     private static Scene getDecoratorScene(JFXDecorator decorator){
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        double width = screenSize.width / 1.35;
-        double height = screenSize.height / 1.2;
+        double width = screenSize.width / 1.0;
+        double height = screenSize.height / 1.0;
         Scene scene = new Scene(decorator, width, height);
         final ObservableList<String> stylesheets = scene.getStylesheets();
         stylesheets.addAll(JFXBaseUtil.class.getResource("/css/jfoenix-main.css").toExternalForm());
@@ -157,8 +157,8 @@ public class JFXBaseUtil {
 //        Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
 //        stage.setWidth(primaryScreenBounds.getWidth()/4);
 //        stage.setHeight(primaryScreenBounds.getHeight()/2);
-        stage.setWidth(475.0);
-        stage.setHeight(490.0);
+        stage.setWidth(400.0);
+        stage.setHeight(400.0);
     }
 
     /**
@@ -169,8 +169,8 @@ public class JFXBaseUtil {
 //        Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
 //        stage.setWidth(primaryScreenBounds.getWidth() / 2);
 //        stage.setHeight(primaryScreenBounds.getHeight() / 1.8);
-        stage.setWidth(1000.0);
-        stage.setHeight(600.0);
+        stage.setWidth(650.0);
+        stage.setHeight(450.0);
     }
 
 }
