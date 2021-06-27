@@ -1,4 +1,4 @@
-package cn.chenxing.domain.util;
+package cn.yansui.domain.util;
 
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputControl;

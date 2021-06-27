@@ -1,4 +1,4 @@
-package cn.chenxing.domain.exception;
+package cn.yansui.exception;
 
 import org.slf4j.helpers.MessageFormatter;
 

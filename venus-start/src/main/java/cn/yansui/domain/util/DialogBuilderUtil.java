@@ -1,4 +1,4 @@
-package cn.chenxing.domain.util;
+package cn.yansui.domain.util;
 
 import com.jfoenix.controls.JFXAlert;
 import com.jfoenix.controls.JFXButton;

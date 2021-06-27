@@ -1,4 +1,4 @@
-package cn.chenxing.domain.threadlocal;
+package cn.yansui.domain.threadlocal;
 
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Window;

@@ -1,6 +1,6 @@
-package cn.chenxing.domain.util;
+package cn.yansui.domain.util;
 
-import cn.chenxing.domain.exception.UsualException;
+import cn.yansui.exception.UsualException;
 
 /**
  * @Description 常用异常Util

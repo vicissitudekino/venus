@@ -1,4 +1,4 @@
-package cn.chenxing.domain.util;
+package cn.yansui.domain.util;
 
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;

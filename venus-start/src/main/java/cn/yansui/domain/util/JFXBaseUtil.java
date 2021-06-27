@@ -1,13 +1,11 @@
-package cn.chenxing.domain.util;
+package cn.yansui.domain.util;
 
 import com.jfoenix.controls.JFXDecorator;
 import javafx.collections.ObservableList;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import org.apache.commons.lang3.StringUtils;

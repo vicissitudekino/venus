@@ -1,4 +1,4 @@
-package cn.chenxing.domain.util;
+package cn.yansui.domain.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

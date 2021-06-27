@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>cn.chenxing</groupId>
+        <groupId>cn.yansui</groupId>
         <artifactId>venus</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -17,12 +17,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>cn.chenxing</groupId>
-            <artifactId>venus-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
 
         <dependency>
             <groupId>de.roskenet</groupId>
@@ -142,7 +136,7 @@
                 <version>8.8.3</version>
                 <configuration>
                     <!-- 启动类 -->
-                    <mainClass>cn.chenxing.Application</mainClass>
+                    <mainClass>cn.yansui.Application</mainClass>
                     <!-- 运行文件名 -->
                     <appName>venus</appName>
                     <!-- 图标的位置 -->
@@ -150,7 +144,7 @@
                     <!-- 桌面图标 -->
                     <needShortcut>true</needShortcut>
                     <!-- 公司-->
-                    <vendor>chenxing</vendor>
+                    <vendor>yansui</vendor>
                 </configuration>
             </plugin>
         </plugins>

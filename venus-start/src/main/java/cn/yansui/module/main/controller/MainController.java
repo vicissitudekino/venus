@@ -1,46 +1,30 @@
 package cn.yansui.module.main.controller;
 
-import cn.yansui.domain.threadlocal.ThreadLocalInfo;
 import cn.yansui.domain.util.AlertUtil;
-import cn.yansui.domain.util.SpringContextUtil;
-import cn.yansui.constant.VenusConstant;
 import cn.yansui.entity.Cybercafe;
 import cn.yansui.entity.Factory;
 import cn.yansui.exception.BizException;
 import cn.yansui.module.main.service.MainService;
 import cn.yansui.utils.ExcelData;
 import cn.yansui.utils.ExcelUtil;
-import cn.yansui.utils.ExportUtil;
 import cn.yansui.utils.FileChooserUtil;
-import cn.hutool.poi.excel.ExcelFileUtil;
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
-import de.felixroske.jfxsupport.AbstractFxmlView;
 import de.felixroske.jfxsupport.FXMLController;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.util.Callback;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.collections.CollectionUtils;
-import org.apache.logging.log4j.util.PropertySource;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 
 import java.io.*;
-import java.math.BigDecimal;
 import java.net.URL;
 import java.util.*;
 import java.util.stream.Collectors;
-
-import static cn.yansui.utils.ExcelUtil.exportFile;
 
 /**
  * @Description 主界面Controller层
@@ -134,6 +118,7 @@ public class MainController implements Initializable {
         this.factoryDataEdit27.clear();
         this.factoryDataEdit37.clear();
         this.factoryData.clear();
+        this.consoleInfo.appendText("\n已清空\n");
     }
 
 
@@ -189,7 +174,6 @@ public class MainController implements Initializable {
                         }
 
                     }
-                    log.info(String.valueOf(factoryDataEdit37.size()));
                     rollNums++;
                 }
             } catch (Exception e) {
@@ -218,7 +202,7 @@ public class MainController implements Initializable {
             ExcelData data = ExcelUtil.readByInputstream(excelFile.getName(), is, false);
 
             try {
-                String afterfile = directoryPath + "\\" + "计算文件结果" + System.currentTimeMillis() + ".xlsx";
+                String afterfile = directoryPath + "\\" + "计算文件结果" + System.currentTimeMillis() + ".xls";
                 this.scaleAll();
                 log.info("1");
                 cybercafeData = cybercafeData.stream().sorted(Comparator.comparing(Cybercafe::getFactoryId)).collect(Collectors.toList());
@@ -269,10 +253,8 @@ public class MainController implements Initializable {
         cybercafeDataEdit.clear();
         factoryDataEdit27 = scaleEdit(resultListNeedEdit27, resultListEdit27, "27", factoryDataEdit27);
         factoryDataEdit.addAll(factoryDataEdit27);
-        log.info(String.valueOf(factoryDataEdit37.size()));
         factoryDataEdit37 = scaleEdit(resultListNeedEdit37, resultListEdit37, "37", factoryDataEdit37);
         factoryDataEdit.addAll(factoryDataEdit37);
-
     }
 
     public void cybercafeSort(List<Cybercafe> cybercafeData) {
@@ -372,116 +354,136 @@ public class MainController implements Initializable {
     }
 
     public List scaleEdit(List<Cybercafe> resultNeedEditList, List<Cybercafe> resultEditList, String group, List<Factory> factoryEditList) {
-        int y = factoryEditList.size() - 1;
         List<Cybercafe> cybercafeSort = resultEditList.stream().sorted(Comparator.comparing(Cybercafe::getDisklessNums)).collect(Collectors.toList());
         cybercafeDataEdit.addAll(cybercafeSort);
         List<Cybercafe> cybercafeNeedEditSort = resultNeedEditList.stream().sorted(Comparator.comparing(Cybercafe::getDisklessNums)).collect(Collectors.toList());
         Map<Integer, List<Cybercafe>> cybercafeGroup = resultEditList.stream().collect(Collectors.groupingBy(Cybercafe::getFactoryId, Collectors.toList()));
         List<Factory> factorySort = factoryEditList.stream().sorted(Comparator.comparing(Factory::getNumber)).collect(Collectors.toList());
-        List<Cybercafe> cycybercafeScaleList = new ArrayList<>();
-        List<Integer> terminalNumsGroup = new ArrayList<>();
-        List<Integer> maxDisklessNumsGroup = new ArrayList<>();
+        List<Cybercafe> cybercafeScaleList=new ArrayList<>();
+        Map<Integer,Integer> terminalNumsGroup=new HashMap<>();
+        Map<Integer,Integer> maxDisklessNumsGroup=new HashMap<>();
+        Map<Integer,Factory> factorySortGroup=new HashMap<>();
+        for(int p=0;p<factorySort.size();p++){
+            factorySortGroup.put(factorySort.get(p).getId(),factorySort.get(p));
+        }
         for (Integer key : cybercafeGroup.keySet()) {
             List<Cybercafe> test = cybercafeGroup.get(key);
             Integer sum = test.stream().mapToInt(Cybercafe::getTerminalNums).sum();
             Integer maxSum = cybercafeGroup.get(key).stream().mapToInt(Cybercafe::getDisklessNums).max().getAsInt();
-            terminalNumsGroup.add(sum);
-            maxDisklessNumsGroup.add(maxSum);
+            maxDisklessNumsGroup.putIfAbsent(cybercafeGroup.get(key).get(0).getFactoryId(),maxSum);
+            terminalNumsGroup.putIfAbsent(cybercafeGroup.get(key).get(0).getFactoryId(),sum);
         }
         int needRollNums = cybercafeNeedEditSort.size();
+
         while (needRollNums > 0) {
-            int num1 = factorySort.get(y).getNumber();
-            Double scaleProportion = Double.parseDouble(this.proportion.getText());
-            Double num2 = Double.valueOf(scaleProportion) * num1;
-            Integer num3 = num2.intValue();
-            int m = 0;
-            int t = 0;
-            int n = resultNeedEditList.size() - 1;
-            int l = cybercafeGroup.size() - 1;
+            int l=0;
+            int n = cybercafeNeedEditSort.size() - 1;
             for (Integer key : cybercafeGroup.keySet()) {
-                if (cybercafeNeedEditSort.size() == 0) {
+                int num1 = factorySortGroup.get(key).getNumber();
+                Double scaleProportion = Double.parseDouble(this.proportion.getText());
+                Double num2 = Double.valueOf(scaleProportion) * num1;
+                Integer num3 = num2.intValue();
+                if (cybercafeNeedEditSort.size() == 0 || n < 0) {
                     break;
                 }
                 n = cybercafeNeedEditSort.size() - 1;
-                Integer num = cybercafeNeedEditSort.get(n).getTerminalNums() + terminalNumsGroup.get(l);
-                if (cybercafeNeedEditSort.get(n).getDisklessNums() <= maxDisklessNumsGroup.get(l) && num <= num3) {
-                    Integer x = cybercafeGroup.get(key).get(0).getFactoryId();
-                    cybercafeNeedEditSort.get(n).setFactoryId(x);
-                    cybercafeSort.add(cybercafeNeedEditSort.get(n));
-                    cybercafeDataEdit.add(cybercafeNeedEditSort.get(n));
-                    cybercafeNeedEditSort.remove(n);
-                    cybercafeSort = cybercafeSort.stream().sorted(Comparator.comparing(Cybercafe::getDisklessNums)).collect(Collectors.toList());
+                if (n < 0) {
+                    break;
                 } else {
-                    if (l == 0) {
-                        cycybercafeScaleList.add(cybercafeNeedEditSort.get(n));
+                    Integer num = cybercafeNeedEditSort.get(n).getTerminalNums() + terminalNumsGroup.get(key);
+                    if (cybercafeNeedEditSort.get(n).getDisklessNums() <= maxDisklessNumsGroup.get(key) && num <= num3) {
+                        Integer x = cybercafeGroup.get(key).get(0).getFactoryId();
+                        cybercafeNeedEditSort.get(n).setFactoryId(x);
+                        cybercafeSort.add(cybercafeNeedEditSort.get(n));
+                        cybercafeDataEdit.add(cybercafeNeedEditSort.get(n));
                         cybercafeNeedEditSort.remove(n);
+                        cybercafeSort = cybercafeSort.stream().sorted(Comparator.comparing(Cybercafe::getDisklessNums)).collect(Collectors.toList());
+                        terminalNumsGroup.put(key, num);
+                    } else {
+                        if (l == cybercafeGroup.size() - 1) {
+                            cybercafeScaleList.add(cybercafeNeedEditSort.get(n));
+                            cybercafeNeedEditSort.remove(n);
+                        }
                     }
                 }
-                l--;
+                l++;
             }
             needRollNums--;
         }
-        List<Factory> factoryList1 = scaleTest(cycybercafeScaleList, group);
+        List<Factory> factoryList1 = scaleTest(cybercafeScaleList, group);
         factoryEditList.addAll(factoryList1);
         return factoryEditList;
     }
 
 
     public List scaleTest(List<Cybercafe> resultList, String group) {
-        int y = 0;
+        int y = 1;
         List<Cybercafe> cybercafeSort = resultList.stream().sorted(Comparator.comparing(Cybercafe::getDisklessNums)).collect(Collectors.toList());
         List<Factory> factoryList = new ArrayList<>();
         while (cybercafeSort.size() > 0) {
-            int num1 = 200 - cybercafeSort.get(cybercafeSort.size() - 1).getDisklessNums();
-            Double scaleProportion = Double.parseDouble(this.proportion.getText());
-            Double num2 = Double.valueOf(scaleProportion) * num1;
-            Integer num3 = num2.intValue();
-            int m = 0;
-            int t = 0;
-            int n = cybercafeSort.size() - 1;
-            String s = group + y;
-            for (int x = 0; x < num3; ) {
-                while (t <= num3) {
-                    t = m + cybercafeSort.get(n).getTerminalNums();
-                    if (t < num3) {
-                        m += cybercafeSort.get(n).getTerminalNums();
-                        cybercafeSort.get(n).setFactoryId(Integer.parseInt(s));
-                        cybercafeDataEdit.add(cybercafeSort.get(n));
-                        cybercafeSort.remove(n);
-                        if (n == 0) {
-                            break;
-                        } else {
-                            n--;
-                        }
-
-                    }
-                }
-                if (t > num3) {
-                    while (n >= 0) {
-                        int l = cybercafeSort.get(n).getTerminalNums();
-                        int j = m + l;
-                        if (j <= num3) {
+            if (cybercafeSort.get(cybercafeSort.size() - 1).getTerminalNums() + cybercafeSort.get(cybercafeSort.size() - 1).getDisklessNums() >= 200) {
+                String s1 = group + y;
+                cybercafeSort.get(cybercafeSort.size() - 1).setFactoryId(Integer.parseInt(s1));
+                cybercafeDataEdit.add(cybercafeSort.get(cybercafeSort.size() - 1));
+                y++;
+                Factory factory = new Factory(Integer.parseInt(s1), s1, 200 - cybercafeSort.get(cybercafeSort.size() - 1).getDisklessNums());
+                factoryList.add(factory);
+                cybercafeSort.remove(cybercafeSort.get(cybercafeSort.size() - 1));
+            } else {
+                int num1 = 200 - cybercafeSort.get(cybercafeSort.size() - 1).getDisklessNums();
+                Double scaleProportion = Double.parseDouble(this.proportion.getText());
+                Double num2 = Double.valueOf(scaleProportion) * num1;
+                Integer num3 = num2.intValue();
+                int m = 0;
+                int t = 0;
+                int n = cybercafeSort.size() - 1;
+                String s = group + y;
+                for (int x = 0; x < num3; ) {
+                    while (t <= num3) {
+                        t = m + cybercafeSort.get(n).getTerminalNums();
+                        if (t < num3) {
                             m += cybercafeSort.get(n).getTerminalNums();
                             cybercafeSort.get(n).setFactoryId(Integer.parseInt(s));
                             cybercafeDataEdit.add(cybercafeSort.get(n));
                             cybercafeSort.remove(n);
-                            n--;
-                        } else {
-                            n--;
+                            if (n == 0) {
+                                break;
+                            } else {
+                                n--;
+                            }
+
                         }
                     }
+                    if (t > num3) {
+                        while (n >= 0) {
+                            int l = cybercafeSort.get(n).getTerminalNums();
+                            int j = m + l;
+                            if (j <= num3) {
+                                m += cybercafeSort.get(n).getTerminalNums();
+                                cybercafeSort.get(n).setFactoryId(Integer.parseInt(s));
+                                cybercafeDataEdit.add(cybercafeSort.get(n));
+                                log.info("");
+                                cybercafeSort.remove(n);
+                                n--;
+                            } else {
+                                n--;
+                            }
+                        }
+                    }
+                    if (n == -1) {
+                        break;
+                    }
+                    if (cybercafeSort.size() == 0) {
+                        break;
+                    }
+                    if (cybercafeSort.get(n).getTerminalNums() + cybercafeSort.get(n).getDisklessNums() >= 200) {
+                        break;
+                    }
                 }
-                if (n == -1) {
-                    break;
-                }
-                if (cybercafeSort.size() == 0) {
-                    break;
-                }
+                y++;
+                Factory factory = new Factory(Integer.parseInt(s), s, num1);
+                factoryList.add(factory);
             }
-            y++;
-            Factory factory = new Factory(Integer.parseInt(s), s, num1);
-            factoryList.add(factory);
-
         }
         return factoryList;
     }

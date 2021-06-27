@@ -16,7 +16,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  * @Author maogen.ymg
  * @Date 2020/2/24
  */
-@SpringBootApplication(scanBasePackages="cn.yansui")
+@SpringBootApplication
 public class Application extends AbstractJavaFxApplicationSupport {
 
     public static void main(String[] args){
