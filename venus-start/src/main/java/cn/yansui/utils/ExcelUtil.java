@@ -24,6 +24,9 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.tomcat.util.http.fileupload.FileItem;
 import org.apache.tomcat.util.http.fileupload.RequestContext;
@@ -217,15 +220,13 @@ public class ExcelUtil {
     }
 
 
-    public static void exportFile(List<Cybercafe> cybercafeData, List<Factory> factoryData,HSSFSheet sheet,ExcelData data,HSSFWorkbook workbook) {
-
-
+    public static void exportFile(List<Cybercafe> cybercafeData, List<Factory> factoryData, XSSFSheet sheet, ExcelData data, XSSFWorkbook workbook) {
         try {
             setColumnWidth(sheet, 8);
             // 创建第一行
-            HSSFRow row = sheet.createRow(0);
+            XSSFRow row = sheet.createRow(0);
             // 创建一个单元格
-            HSSFCell cell = null;
+            XSSFCell cell = null;
             for (int i = 0; i < data.getTitle().size(); i++) {
                 cell = row.createCell(i);
                 // 设置样式
@@ -233,16 +234,13 @@ public class ExcelUtil {
                 cellStyle.setAlignment(CellStyle.ALIGN_CENTER); // 设置字体居中
                 // 设置字体
                 Font font = workbook.createFont();
-//                font.setFontName("宋体");
-//                font.setBoldweight(Font.BOLDWEIGHT_BOLD);// 字体加粗
-                // font.setFontHeight((short)12);
-//                font.setFontHeightInPoints((short) 13);
                 cellStyle.setFont(font);
                 cell.setCellStyle(cellStyle);
                 cell.setCellValue(data.getTitle().get(i));
             }
-            for(int i=1;i<data.getData().size()+1;i++){
+            for(int i=1;i<cybercafeData.size()+1;i++){
                 Row nextRow = sheet.createRow(i);
+                CellStyle style=workbook.createCellStyle();
                 for(int n=0;n<8;n++){
                     Cell cell2 = nextRow.createCell(n);
                     Cybercafe cybercafe= cybercafeData.get(i-1);
@@ -254,29 +252,42 @@ public class ExcelUtil {
                         }
                     }
                     if (n == 0) {
-                        cell2.setCellValue(cybercafe.getFactoryId());
+                        cell2.setCellValue(cybercafe.getName());
+                        cell2.setCellStyle(style);
+                        log.info(cybercafe.getName());
+
                     }
                     if (n == 1) {
-                        cell2.setCellValue(cybercafe.getFactoryName());
+                        cell2.setCellValue(cybercafe.getTerminalNums());
+                        cell2.setCellStyle(style);
                     }
                     if (n == 2) {
-                        cell2.setCellValue(factoryNumber);
+                        cell2.setCellValue(cybercafe.getDisklessNums());
+                        cell2.setCellStyle(style);
                     }
                     if (n == 3) {
-                        cell2.setCellValue(cybercafe.getName());
-                        log.info(cybercafe.getName());
+                        cell2.setCellValue(cybercafe.getNums27());
+                        cell2.setCellStyle(style);
                     }
                     if (n == 4) {
-                        cell2.setCellValue(cybercafe.getTerminalNums());
+                        cell2.setCellValue(cybercafe.getNums37());
+                        cell2.setCellStyle(style);
                     }
                     if (n == 5) {
-                        cell2.setCellValue(cybercafe.getDisklessNums());
+                        cell2.setCellValue(factoryNumber);
+                        cell2.setCellStyle(style);
                     }
                     if (n == 6) {
-                        cell2.setCellValue(cybercafe.getNums27());
+                        cell2.setCellValue(cybercafe.getFactoryId());
+                        cell2.setCellStyle(style);
                     }
                     if (n == 7) {
-                        cell2.setCellValue(cybercafe.getNums37());
+                        cell2.setCellValue(cybercafe.getFactoryName());
+                        if(cybercafe.getFactoryName()==null&&sheet.getSheetName()=="基于原先算法"){
+                            style.setFillForegroundColor(IndexedColors.YELLOW.getIndex());
+                            style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+                            cell2.setCellStyle(style);
+                        }
                     }
 
                 }

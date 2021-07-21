@@ -18,6 +18,8 @@ import javafx.scene.layout.BorderPane;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 
@@ -124,8 +126,22 @@ public class MainController implements Initializable {
 
     @FXML
     private void uploadFile() throws IOException {
+        this.filePath.clear();
+        this.cybercafeData.clear();
+        this.cybercafeDataEdit.clear();
+        this.cybercafeDataEdit.clear();
+        this.cybercafeDataEdit.clear();
+        this.resultList27.clear();
+        this.resultList37.clear();
+        this.resultListEdit27.clear();
+        this.resultListEdit37.clear();
+        this.resultListNeedEdit27.clear();
+        this.resultListNeedEdit37.clear();
+        this.factoryDataEdit.clear();
+        this.factoryDataEdit27.clear();
+        this.factoryDataEdit37.clear();
+        this.factoryData.clear();
         File file = FileChooserUtil.chooseTableFile("选择文件");
-
         if (null != file) {
             this.filePath.setText(file.getPath());
             File excelFile = new File(this.filePath.getText());
@@ -144,31 +160,35 @@ public class MainController implements Initializable {
                 int rollNums = 1;
                 while (var5.hasNext()) {
                     List<String> Content = (List) var5.next();
-                    if (Content.get(0) == null) {
-                        this.cybercafeData.add(new Cybercafe(null, null, rollNums, (String) Content.get(3), Integer.valueOf(Content.get(4)), Integer.valueOf(Content.get(5)), Integer.valueOf(Content.get(6)), Integer.valueOf(Content.get(7))));
+                    if (Content.size() == 0 || Content.size() < 5) {
+                        data.getData().remove(var5);
+                        break;
+                    }
+                    if (Content.size() == 5 || Content.get(5) == null) {
+                        this.cybercafeData.add(new Cybercafe(null, null, rollNums, (String) Content.get(0), Integer.valueOf(Content.get(1)), Integer.valueOf(Content.get(2)), Integer.valueOf(Content.get(3)), Integer.valueOf(Content.get(4))));
 //                    this.cybercafeDataEdit.add(new Cybercafe(null, null, rollNums, (String) Content.get(3), Integer.valueOf(Content.get(4)), Integer.valueOf(Content.get(5)), Integer.valueOf(Content.get(6)), Integer.valueOf(Content.get(7))));
                     } else {
-                        this.cybercafeData.add(new Cybercafe(Integer.valueOf(Content.get(0)), (String) Content.get(1), rollNums, (String) Content.get(3), Integer.valueOf(Content.get(4)), Integer.valueOf(Content.get(5)), Integer.valueOf(Content.get(6)), Integer.valueOf(Content.get(7))));
+                        this.cybercafeData.add(new Cybercafe(Integer.valueOf(Content.get(6)), (String) Content.get(7), rollNums, (String) Content.get(0), Integer.valueOf(Content.get(1)), Integer.valueOf(Content.get(2)), Integer.valueOf(Content.get(3)), Integer.valueOf(Content.get(4))));
 //                    this.cybercafeDataEdit.add(new Cybercafe(Integer.valueOf(Content.get(0)), (String) Content.get(1), rollNums, (String) Content.get(3), Integer.valueOf(Content.get(4)), Integer.valueOf(Content.get(5)), Integer.valueOf(Content.get(6)), Integer.valueOf(Content.get(7))));
-
                     }
                     if (rollNums == 1) {
-                        this.factoryDataEdit.add(new Factory(Integer.valueOf(Content.get(0)), (String) Content.get(1), Integer.valueOf(Content.get(2))));
-                        if (Integer.valueOf(Content.get(7)) != 0) {
-                            this.factoryDataEdit37.add(new Factory(Integer.valueOf(Content.get(0)), (String) Content.get(1), Integer.valueOf(Content.get(2))));
+                        this.factoryDataEdit.add(new Factory(Integer.valueOf(Content.get(6)), (String) Content.get(7), Integer.valueOf(Content.get(5))));
+                        if (Integer.valueOf(Content.get(4)) != 0) {
+                            this.factoryDataEdit37.add(new Factory(Integer.valueOf(Content.get(6)), (String) Content.get(7), Integer.valueOf(Content.get(5))));
                         } else {
-                            this.factoryDataEdit27.add(new Factory(Integer.valueOf(Content.get(0)), (String) Content.get(1), Integer.valueOf(Content.get(2))));
+                            this.factoryDataEdit27.add(new Factory(Integer.valueOf(Content.get(6)), (String) Content.get(7), Integer.valueOf(Content.get(5))));
                         }
-
                     } else {
-                        if (Content.get(0) != null) {
-                            int s = this.factoryDataEdit.get(factoryDataEdit.size() - 1).getId();
-                            if (!Integer.valueOf(Content.get(0)).equals(s)) {
-                                this.factoryDataEdit.add(new Factory(Integer.valueOf(Content.get(0)), (String) Content.get(1), Integer.valueOf(Content.get(2))));
-                                if (Integer.valueOf(Content.get(7)) != 0) {
-                                    this.factoryDataEdit37.add(new Factory(Integer.valueOf(Content.get(0)), (String) Content.get(1), Integer.valueOf(Content.get(2))));
-                                } else {
-                                    this.factoryDataEdit27.add(new Factory(Integer.valueOf(Content.get(0)), (String) Content.get(1), Integer.valueOf(Content.get(2))));
+                        if (Content.size() > 7) {
+                            if (Content.get(6) != null) {
+                                int s = this.factoryDataEdit.get(factoryDataEdit.size() - 1).getId();
+                                if (!Integer.valueOf(Content.get(6)).equals(s)) {
+                                    this.factoryDataEdit.add(new Factory(Integer.valueOf(Content.get(6)), (String) Content.get(7), Integer.valueOf(Content.get(5))));
+                                    if (Integer.valueOf(Content.get(4)) != 0) {
+                                        this.factoryDataEdit37.add(new Factory(Integer.valueOf(Content.get(6)), (String) Content.get(7), Integer.valueOf(Content.get(5))));
+                                    } else {
+                                        this.factoryDataEdit27.add(new Factory(Integer.valueOf(Content.get(6)), (String) Content.get(7), Integer.valueOf(Content.get(5))));
+                                    }
                                 }
                             }
                         }
@@ -178,7 +198,8 @@ public class MainController implements Initializable {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                this.consoleInfo.appendText("excel表格数据格式有误，请检查\n");
+                this.consoleInfo.appendText("\nexcel表格数据格式有误，请检查\n");
+                AlertUtil.showWarnAlert("excel表格数据格式有误，请检查");
             }
 
         }
@@ -187,73 +208,72 @@ public class MainController implements Initializable {
 
     @FXML
     private void handleDetailsFile() {
-//        List<Cybercafe> cybercafeSortName = cybercafeData.stream().sorted(Comparator.comparing(Cybercafe::getDisklessNums)).collect(Collectors.toList());
-//        this.consoleInfo.appendText(cybercafeSortName.toString());
-        if (AlertUtil.showConfirmAlert("是否确认开始计算？")) {
-            this.consoleInfo.appendText("\n开始计算\n");
-            File excelFile = new File(this.filePath.getText());
-            FileInputStream is = null;
-            try {
-                is = new FileInputStream(excelFile);
-            } catch (FileNotFoundException var17) {
-                var17.printStackTrace();
-            }
-
-            ExcelData data = ExcelUtil.readByInputstream(excelFile.getName(), is, false);
-
-            try {
-                String afterfile = directoryPath + "\\" + "计算文件结果" + System.currentTimeMillis() + ".xls";
-                this.scaleAll();
-                log.info("1");
-                cybercafeData = cybercafeData.stream().sorted(Comparator.comparing(Cybercafe::getFactoryId)).collect(Collectors.toList());
-                log.info("2");
-                if (resultListNeedEdit37.size() != 0 || resultListNeedEdit27.size() != 0) {
-                    cybercafeDataEdit = cybercafeDataEdit.stream().sorted(Comparator.comparing(Cybercafe::getFactoryId)).collect(Collectors.toList());
-                    log.info(String.valueOf(cybercafeDataEdit.size()));
-                }
-                log.info("3");
-                try {
-                    HSSFWorkbook workbook;
-                    workbook = new HSSFWorkbook();
-                    HSSFSheet sheet1 = workbook.createSheet("最优算法");
-                    HSSFSheet sheet2 = workbook.createSheet("基于原先算法");
-                    ExcelUtil.exportFile(this.cybercafeData, this.factoryData, sheet1, data, workbook);
-                    log.info("4");
-                    if (resultListNeedEdit37.size() != 0 || resultListNeedEdit27.size() != 0) {
-                        ExcelUtil.exportFile(this.cybercafeDataEdit, this.factoryDataEdit, sheet2, data, workbook);
+        if(!filePath.getText().equals("")) {
+            if (!proportion.getText().equals("")) {
+                if (AlertUtil.showConfirmAlert("是否确认开始计算？")) {
+                    this.consoleInfo.appendText("\n开始计算\n");
+                    File excelFile = new File(this.filePath.getText());
+                    FileInputStream is = null;
+                    try {
+                        is = new FileInputStream(excelFile);
+                    } catch (FileNotFoundException var17) {
+                        var17.printStackTrace();
                     }
-                    log.info("5");
-                    FileOutputStream os = new FileOutputStream(afterfile);
-                    workbook.write(os);
-                    log.info("6");
-                    os.close();
-                    this.consoleInfo.appendText("计算结束，计算结果文件如下：\n");
-                    this.consoleInfo.appendText(afterfile);
-                } catch (IOException var4) {
-                    var4.printStackTrace();
-                    throw new BizException("生成文件流出错");
+
+                    ExcelData data = ExcelUtil.readByInputstream(excelFile.getName(), is, false);
+
+                    try {
+                        String afterfile = directoryPath + "\\" + "计算文件结果" + System.currentTimeMillis() + ".xlsx";
+                        this.scaleAll();
+                        cybercafeData = cybercafeData.stream().sorted(Comparator.comparing(Cybercafe::getFactoryId)).collect(Collectors.toList());
+                        if (resultListNeedEdit37.size() != 0 || resultListNeedEdit27.size() != 0) {
+                            cybercafeDataEdit = cybercafeDataEdit.stream().sorted(Comparator.comparing(Cybercafe::getFactoryId)).collect(Collectors.toList());
+                        }
+                        try {
+                            XSSFWorkbook workbook;
+                            workbook = new XSSFWorkbook();
+                            XSSFSheet sheet2 = workbook.createSheet("基于原先算法");
+                            XSSFSheet sheet1 = workbook.createSheet("最优算法");
+                            ExcelUtil.exportFile(this.cybercafeData, this.factoryData, sheet1, data, workbook);
+                            if (resultListNeedEdit37.size() != 0 || resultListNeedEdit27.size() != 0) {
+                                ExcelUtil.exportFile(this.cybercafeDataEdit, this.factoryDataEdit, sheet2, data, workbook);
+                            }
+                            FileOutputStream os = new FileOutputStream(afterfile);
+                            workbook.write(os);
+                            os.close();
+                            this.consoleInfo.appendText("计算结束，计算结果文件如下：\n");
+                            this.consoleInfo.appendText(afterfile);
+                        } catch (IOException var4) {
+                            var4.printStackTrace();
+                            throw new BizException("生成文件流出错");
+
+                        }
+                        AlertUtil.showInfoAlert("执行完毕，请去上传文件的目录下查看计算结果");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        AlertUtil.showInfoAlert("计算失败");
+                    }
                 }
-                AlertUtil.showInfoAlert("执行完毕，请去上传文件的目录下查看计算结果");
-            } catch (Exception e) {
-                log.info("计算失败");
-                AlertUtil.showInfoAlert("计算失败");
+
+            } else {
+                AlertUtil.showWarnAlert("请填写系数");
             }
-
-
+        }else{
+            AlertUtil.showWarnAlert("请选择文件");
         }
     }
 
     public void scaleAll() {
         cybercafeSort(cybercafeData);
         cybercafeData.clear();
-        factoryData = scale(resultList27, "27");
-        List<Factory> factoryData1 = scale(resultList37, "37");
+        factoryData = scale(resultList27, "2070");
+        List<Factory> factoryData1 = scale(resultList37, "3070");
         factoryData.addAll(factoryData1);
         factoryDataEdit.clear();
         cybercafeDataEdit.clear();
-        factoryDataEdit27 = scaleEdit(resultListNeedEdit27, resultListEdit27, "27", factoryDataEdit27);
+        factoryDataEdit27 = scaleEdit(resultListNeedEdit27, resultListEdit27, "2070", factoryDataEdit27);
         factoryDataEdit.addAll(factoryDataEdit27);
-        factoryDataEdit37 = scaleEdit(resultListNeedEdit37, resultListEdit37, "37", factoryDataEdit37);
+        factoryDataEdit37 = scaleEdit(resultListNeedEdit37, resultListEdit37, "3070", factoryDataEdit37);
         factoryDataEdit.addAll(factoryDataEdit37);
     }
 
@@ -359,27 +379,28 @@ public class MainController implements Initializable {
         List<Cybercafe> cybercafeNeedEditSort = resultNeedEditList.stream().sorted(Comparator.comparing(Cybercafe::getDisklessNums)).collect(Collectors.toList());
         Map<Integer, List<Cybercafe>> cybercafeGroup = resultEditList.stream().collect(Collectors.groupingBy(Cybercafe::getFactoryId, Collectors.toList()));
         List<Factory> factorySort = factoryEditList.stream().sorted(Comparator.comparing(Factory::getNumber)).collect(Collectors.toList());
-        List<Cybercafe> cybercafeScaleList=new ArrayList<>();
-        Map<Integer,Integer> terminalNumsGroup=new HashMap<>();
-        Map<Integer,Integer> maxDisklessNumsGroup=new HashMap<>();
-        Map<Integer,Factory> factorySortGroup=new HashMap<>();
-        for(int p=0;p<factorySort.size();p++){
-            factorySortGroup.put(factorySort.get(p).getId(),factorySort.get(p));
+        List<Cybercafe> cybercafeScaleList = new ArrayList<>();
+        Map<Integer, Integer> terminalNumsGroup = new HashMap<>();
+        Map<Integer, Integer> maxDisklessNumsGroup = new HashMap<>();
+        Map<Integer, Factory> factorySortGroup = new HashMap<>();
+        for (int p = 0; p < factorySort.size(); p++) {
+            factorySortGroup.put(factorySort.get(p).getId(), factorySort.get(p));
         }
         for (Integer key : cybercafeGroup.keySet()) {
             List<Cybercafe> test = cybercafeGroup.get(key);
             Integer sum = test.stream().mapToInt(Cybercafe::getTerminalNums).sum();
             Integer maxSum = cybercafeGroup.get(key).stream().mapToInt(Cybercafe::getDisklessNums).max().getAsInt();
-            maxDisklessNumsGroup.putIfAbsent(cybercafeGroup.get(key).get(0).getFactoryId(),maxSum);
-            terminalNumsGroup.putIfAbsent(cybercafeGroup.get(key).get(0).getFactoryId(),sum);
+            maxDisklessNumsGroup.putIfAbsent(cybercafeGroup.get(key).get(0).getFactoryId(), maxSum);
+            terminalNumsGroup.putIfAbsent(cybercafeGroup.get(key).get(0).getFactoryId(), sum);
         }
         int needRollNums = cybercafeNeedEditSort.size();
 
         while (needRollNums > 0) {
-            int l=0;
+            int l = 0;
             int n = cybercafeNeedEditSort.size() - 1;
             for (Integer key : cybercafeGroup.keySet()) {
                 int num1 = factorySortGroup.get(key).getNumber();
+                log.info(String.valueOf(l));
                 Double scaleProportion = Double.parseDouble(this.proportion.getText());
                 Double num2 = Double.valueOf(scaleProportion) * num1;
                 Integer num3 = num2.intValue();
@@ -462,7 +483,6 @@ public class MainController implements Initializable {
                                 m += cybercafeSort.get(n).getTerminalNums();
                                 cybercafeSort.get(n).setFactoryId(Integer.parseInt(s));
                                 cybercafeDataEdit.add(cybercafeSort.get(n));
-                                log.info("");
                                 cybercafeSort.remove(n);
                                 n--;
                             } else {
